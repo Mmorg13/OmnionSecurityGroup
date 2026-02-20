@@ -79,17 +79,43 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="primary-need">Primary need *</label>
-                  <select id="primary-need" name="primary-need" required>
-                    <option value="">Select primary need</option>
-                    <option value="security-foundations">Security Foundations (Get audit-ready)</option>
-                    <option value="strategic-advisory">Strategic Security Advisory (Build roadmap)</option>
-                    <option value="security-assessment">Security Assessment & Remediation</option>
-                    <option value="ai-security">AI Security & Responsible AI Advisory</option>
-                    <option value="tool-optimization">Security Tool Optimization</option>
-                    <option value="security-training">Security Education & Training</option>
-                    <option value="not-sure">Not sure - need guidance</option>
-                  </select>
+                  <label>Services of interest *</label>
+                  <div class="multi-select" data-required="true">
+                    <div class="multi-select-trigger">
+                      <span class="multi-select-placeholder">Select services...</span>
+                      <div class="multi-select-arrow">▼</div>
+                    </div>
+                    <div class="multi-select-options">
+                      <label class="multi-select-option">
+                        <input type="checkbox" name="services-needed" value="security-foundations">
+                        <span>Security Foundations (Get audit-ready)</span>
+                      </label>
+                      <label class="multi-select-option">
+                        <input type="checkbox" name="services-needed" value="strategic-advisory">
+                        <span>Strategic Security Advisory (Build roadmap)</span>
+                      </label>
+                      <label class="multi-select-option">
+                        <input type="checkbox" name="services-needed" value="security-assessment">
+                        <span>Security Assessment & Remediation</span>
+                      </label>
+                      <label class="multi-select-option">
+                        <input type="checkbox" name="services-needed" value="ai-security">
+                        <span>AI Security & Responsible AI Advisory</span>
+                      </label>
+                      <label class="multi-select-option">
+                        <input type="checkbox" name="services-needed" value="tool-optimization">
+                        <span>Security Tool Optimization</span>
+                      </label>
+                      <label class="multi-select-option">
+                        <input type="checkbox" name="services-needed" value="security-training">
+                        <span>Security Education & Training</span>
+                      </label>
+                      <label class="multi-select-option">
+                        <input type="checkbox" name="services-needed" value="not-sure">
+                        <span>Not sure - need guidance</span>
+                      </label>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="form-group">
@@ -170,6 +196,66 @@
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    
+    <!-- Multi-Select Dropdown Functionality -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const multiSelect = document.querySelector('.multi-select');
+        const trigger = multiSelect.querySelector('.multi-select-trigger');
+        const placeholder = multiSelect.querySelector('.multi-select-placeholder');
+        const arrow = multiSelect.querySelector('.multi-select-arrow');
+        const options = multiSelect.querySelector('.multi-select-options');
+        const checkboxes = multiSelect.querySelectorAll('input[type="checkbox"]');
+        const form = document.querySelector('form[name="contact"]');
+
+        // Toggle dropdown
+        trigger.addEventListener('click', function(e) {
+          e.preventDefault();
+          const isOpen = multiSelect.classList.toggle('open');
+          arrow.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+          if (!multiSelect.contains(e.target)) {
+            multiSelect.classList.remove('open');
+            arrow.style.transform = 'rotate(0deg)';
+          }
+        });
+
+        // Update placeholder text based on selections
+        function updatePlaceholder() {
+          const selected = Array.from(checkboxes).filter(cb => cb.checked);
+          if (selected.length === 0) {
+            placeholder.textContent = 'Select services...';
+            trigger.classList.remove('has-selection');
+          } else if (selected.length === 1) {
+            placeholder.textContent = selected[0].nextElementSibling.textContent;
+            trigger.classList.add('has-selection');
+          } else {
+            placeholder.textContent = `${selected.length} services selected`;
+            trigger.classList.add('has-selection');
+          }
+        }
+
+        // Handle checkbox changes
+        checkboxes.forEach(checkbox => {
+          checkbox.addEventListener('change', updatePlaceholder);
+        });
+
+        // Form validation
+        form.addEventListener('submit', function(e) {
+          const hasSelection = Array.from(checkboxes).some(cb => cb.checked);
+          if (!hasSelection) {
+            e.preventDefault();
+            alert('Please select at least one service of interest.');
+            multiSelect.classList.add('open');
+            arrow.style.transform = 'rotate(180deg)';
+            return false;
+          }
+        });
+      });
     </script>
     
     <!-- Advanced Interactive JavaScript -->
