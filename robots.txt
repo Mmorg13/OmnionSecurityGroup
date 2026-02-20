@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://omnionsecurity.com/sitemap.xml
+
+# Block any sensitive directories (if you add them later)
+Disallow: /admin/
+Disallow: /.git/
