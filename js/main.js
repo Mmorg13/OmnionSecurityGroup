@@ -10,6 +10,18 @@
  * - Real-time visual feedback
  */
 
+// Keep customer-facing URLs clean while preserving reliable .html routing.
+(function applyPrettyUrlAfterLoad() {
+    const path = window.location.pathname;
+    if (path.endsWith(".html")) {
+        const prettyPath = path
+            .replace(/\/index\.html$/, "/")
+            .replace(/\.html$/, "/");
+        const next = `${prettyPath}${window.location.search}${window.location.hash}`;
+        window.history.replaceState({}, "", next);
+    }
+})();
+
 class TechnicalInterface {
     constructor() {
         this.isLoaded = false;
