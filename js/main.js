@@ -10,18 +10,6 @@
  * - Real-time visual feedback
  */
 
-// Show clean, extensionless URLs in the browser bar.
-(function applyPrettyUrl() {
-    const path = window.location.pathname;
-    if (path.endsWith(".html")) {
-        const prettyPath = path
-            .replace(/\/index\.html$/, "/")
-            .replace(/\.html$/, "/");
-        const next = `${prettyPath}${window.location.search}${window.location.hash}`;
-        window.history.replaceState({}, "", next);
-    }
-})();
-
 class TechnicalInterface {
     constructor() {
         this.isLoaded = false;

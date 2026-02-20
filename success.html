@@ -3,16 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script>
-      (function () {
-        if (window.location.pathname.endsWith(".html")) {
-          const cleanPath = window.location.pathname
-            .replace(/\/index\.html$/, "/")
-            .replace(/\.html$/, "/");
-          window.history.replaceState({}, "", cleanPath + window.location.search + window.location.hash);
-        }
-      })();
-    </script>
     <title>Thank You | Omnion Security Group</title>
     <meta name="description" content="Thank you for contacting Omnion Security Group. We'll be in touch within 1-2 business days." />
     <meta name="robots" content="noindex, nofollow" />
