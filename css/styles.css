@@ -707,6 +707,259 @@
     line-height: 1.4;
   }
 
+  /* Modern Form Components */
+  .contact-form{
+    margin-top: 32px;
+  }
+
+  /* Modern Input Fields with Floating Labels */
+  .modern-input{
+    position: relative;
+    margin-bottom: 24px;
+  }
+
+  .modern-input input{
+    width: 100%;
+    padding: 16px 16px 8px 16px;
+    border: 2px solid var(--stroke);
+    border-radius: 12px;
+    background: white;
+    font-size: 16px;
+    color: var(--ink);
+    transition: all 0.3s ease;
+    outline: none;
+  }
+
+  .modern-input label{
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    color: var(--muted);
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    background: white;
+    padding: 0 4px;
+  }
+
+  .modern-input input:focus,
+  .modern-input input:not(:placeholder-shown){
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(28, 93, 255, 0.1);
+  }
+
+  .modern-input input:focus + label,
+  .modern-input input:not(:placeholder-shown) + label{
+    top: -8px;
+    font-size: 12px;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* Custom Select (matching multi-select) */
+  .custom-select{
+    position: relative;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .custom-select-trigger{
+    background: white;
+    border: 2px solid var(--stroke);
+    border-radius: 12px;
+    padding: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 56px;
+    transition: all 0.3s ease;
+  }
+
+  .custom-select-trigger:hover,
+  .custom-select-trigger.has-selection{
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(28, 93, 255, 0.1);
+  }
+
+  .custom-select-placeholder{
+    color: var(--muted);
+    font-size: 16px;
+    flex-grow: 1;
+  }
+
+  .custom-select-trigger.has-selection .custom-select-placeholder{
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .custom-select-arrow{
+    color: var(--muted);
+    font-size: 12px;
+    transition: transform 0.3s ease;
+    margin-left: 12px;
+  }
+
+  .custom-select-options{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 2px solid var(--accent);
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    max-height: 240px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .custom-select.open .custom-select-options{
+    display: block;
+  }
+
+  .custom-select.open .custom-select-trigger{
+    border-radius: 12px 12px 0 0;
+  }
+
+  .custom-select.open .custom-select-arrow{
+    transform: rotate(180deg);
+  }
+
+  .custom-select-option{
+    padding: 16px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--stroke2);
+    transition: background-color 0.2s ease;
+  }
+
+  .custom-select-option:last-child{
+    border-bottom: none;
+  }
+
+  .custom-select-option:hover{
+    background-color: rgba(28, 93, 255, 0.05);
+  }
+
+  .custom-select-option span{
+    font-size: 14px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* Modern Textarea */
+  .modern-textarea{
+    position: relative;
+    margin-bottom: 32px;
+  }
+
+  .modern-textarea textarea{
+    width: 100%;
+    padding: 16px 16px 8px 16px;
+    border: 2px solid var(--stroke);
+    border-radius: 12px;
+    background: white;
+    font-size: 16px;
+    color: var(--ink);
+    font-family: var(--font);
+    resize: vertical;
+    min-height: 120px;
+    transition: all 0.3s ease;
+    outline: none;
+  }
+
+  .modern-textarea label{
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    color: var(--muted);
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    background: white;
+    padding: 0 4px;
+  }
+
+  .modern-textarea textarea:focus,
+  .modern-textarea textarea:not(:placeholder-shown){
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(28, 93, 255, 0.1);
+  }
+
+  .modern-textarea textarea:focus + label,
+  .modern-textarea textarea:not(:placeholder-shown) + label{
+    top: -8px;
+    font-size: 12px;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .textarea-hint{
+    margin-top: 8px;
+    font-size: 14px;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  /* Modern Button */
+  .modern-btn{
+    position: relative;
+    background: linear-gradient(135deg, var(--accent), #0d4ce8);
+    color: white;
+    border: none;
+    padding: 18px 32px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    min-width: 200px;
+    box-shadow: 0 4px 12px rgba(28, 93, 255, 0.3);
+  }
+
+  .modern-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(28, 93, 255, 0.4);
+  }
+
+  .modern-btn:active{
+    transform: translateY(0px);
+  }
+
+  .btn-loading{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .modern-btn.loading .btn-text{
+    display: none;
+  }
+
+  .modern-btn.loading .btn-loading{
+    display: flex;
+  }
+
+  .loading-spinner{
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin{
+    0%{ transform: rotate(0deg); }
+    100%{ transform: rotate(360deg); }
+  }
+
   /* About Page - Credentials Grid */
   .credentials-grid{
     display: grid;

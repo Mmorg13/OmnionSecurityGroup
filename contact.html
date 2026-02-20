@@ -26,7 +26,7 @@
           <a class="nav__link" href="index.html">Home</a>
           <a class="nav__link" href="services.html">Services</a>
           <a class="nav__link" href="about.html">About</a>
-          <a class="nav__link nav__link--active" href="contact.html">Contact</a>
+          <a class="btn btn--small" href="contact.html">Contact</a>
         </nav>
       </div>
     </header>
@@ -51,31 +51,47 @@
               </p>
 
               <form name="contact" method="POST" netlify class="contact-form">
-                <div class="form-group">
+                <div class="form-group modern-input">
+                  <input type="text" id="name" name="name" required placeholder=" ">
                   <label for="name">Name *</label>
-                  <input type="text" id="name" name="name" required>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group modern-input">
+                  <input type="email" id="email" name="email" required placeholder=" ">
                   <label for="email">Email *</label>
-                  <input type="email" id="email" name="email" required>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group modern-input">
+                  <input type="text" id="organization" name="organization" required placeholder=" ">
                   <label for="organization">Organization *</label>
-                  <input type="text" id="organization" name="organization" required>
                 </div>
 
                 <div class="form-group">
-                  <label for="org-type">Organization type *</label>
-                  <select id="org-type" name="org-type" required>
-                    <option value="">Select type</option>
-                    <option value="nonprofit">Nonprofit</option>
-                    <option value="small-business">Small Business (1-50 employees)</option>
-                    <option value="mid-business">Medium Business (50-200 employees)</option>
-                    <option value="enterprise">Enterprise (200+ employees)</option>
-                    <option value="other">Other</option>
-                  </select>
+                  <label>Organization type *</label>
+                  <div class="custom-select" data-required="true">
+                    <div class="custom-select-trigger">
+                      <span class="custom-select-placeholder">Select organization type...</span>
+                      <div class="custom-select-arrow">▼</div>
+                    </div>
+                    <div class="custom-select-options">
+                      <div class="custom-select-option" data-value="nonprofit">
+                        <span>Nonprofit</span>
+                      </div>
+                      <div class="custom-select-option" data-value="small-business">
+                        <span>Small Business (1-50 employees)</span>
+                      </div>
+                      <div class="custom-select-option" data-value="mid-business">
+                        <span>Medium Business (50-200 employees)</span>
+                      </div>
+                      <div class="custom-select-option" data-value="enterprise">
+                        <span>Enterprise (200+ employees)</span>
+                      </div>
+                      <div class="custom-select-option" data-value="other">
+                        <span>Other</span>
+                      </div>
+                    </div>
+                    <input type="hidden" name="org-type" required>
+                  </div>
                 </div>
 
                 <div class="form-group">
@@ -118,12 +134,19 @@
                   </div>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group modern-textarea">
+                  <textarea id="message" name="message" rows="4" placeholder=" "></textarea>
                   <label for="message">Additional details</label>
-                  <textarea id="message" name="message" rows="4" placeholder="Timeline, budget considerations, current tools, specific concerns..."></textarea>
+                  <div class="textarea-hint">Timeline, budget considerations, current tools, specific concerns...</div>
                 </div>
 
-                <button type="submit" class="btn btn--dark">Send consultation request</button>
+                <button type="submit" class="btn btn--primary modern-btn">
+                  <span class="btn-text">Send consultation request</span>
+                  <div class="btn-loading">
+                    <div class="loading-spinner"></div>
+                    <span>Sending...</span>
+                  </div>
+                </button>
               </form>
             </div>
 
@@ -198,62 +221,118 @@
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
     
-    <!-- Multi-Select Dropdown Functionality -->
+    <!-- Modern Form Functionality -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
+        // Multi-Select Dropdown
         const multiSelect = document.querySelector('.multi-select');
-        const trigger = multiSelect.querySelector('.multi-select-trigger');
-        const placeholder = multiSelect.querySelector('.multi-select-placeholder');
-        const arrow = multiSelect.querySelector('.multi-select-arrow');
-        const options = multiSelect.querySelector('.multi-select-options');
+        const multiTrigger = multiSelect.querySelector('.multi-select-trigger');
+        const multiPlaceholder = multiSelect.querySelector('.multi-select-placeholder');
+        const multiArrow = multiSelect.querySelector('.multi-select-arrow');
         const checkboxes = multiSelect.querySelectorAll('input[type="checkbox"]');
+
+        // Custom Select Dropdown  
+        const customSelect = document.querySelector('.custom-select');
+        const customTrigger = customSelect.querySelector('.custom-select-trigger');
+        const customPlaceholder = customSelect.querySelector('.custom-select-placeholder');
+        const customArrow = customSelect.querySelector('.custom-select-arrow');
+        const customOptions = customSelect.querySelectorAll('.custom-select-option');
+        const hiddenInput = customSelect.querySelector('input[type="hidden"]');
+
         const form = document.querySelector('form[name="contact"]');
+        const submitBtn = form.querySelector('.modern-btn');
 
-        // Toggle dropdown
-        trigger.addEventListener('click', function(e) {
+        // Multi-Select Logic
+        multiTrigger.addEventListener('click', function(e) {
           e.preventDefault();
+          closeAllDropdowns();
           const isOpen = multiSelect.classList.toggle('open');
-          arrow.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+          multiArrow.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
         });
 
-        // Close dropdown when clicking outside
-        document.addEventListener('click', function(e) {
-          if (!multiSelect.contains(e.target)) {
-            multiSelect.classList.remove('open');
-            arrow.style.transform = 'rotate(0deg)';
-          }
-        });
-
-        // Update placeholder text based on selections
-        function updatePlaceholder() {
+        function updateMultiSelect() {
           const selected = Array.from(checkboxes).filter(cb => cb.checked);
           if (selected.length === 0) {
-            placeholder.textContent = 'Select services...';
-            trigger.classList.remove('has-selection');
+            multiPlaceholder.textContent = 'Select services...';
+            multiTrigger.classList.remove('has-selection');
           } else if (selected.length === 1) {
-            placeholder.textContent = selected[0].nextElementSibling.textContent;
-            trigger.classList.add('has-selection');
+            multiPlaceholder.textContent = selected[0].nextElementSibling.textContent;
+            multiTrigger.classList.add('has-selection');
           } else {
-            placeholder.textContent = `${selected.length} services selected`;
-            trigger.classList.add('has-selection');
+            multiPlaceholder.textContent = `${selected.length} services selected`;
+            multiTrigger.classList.add('has-selection');
           }
         }
 
-        // Handle checkbox changes
         checkboxes.forEach(checkbox => {
-          checkbox.addEventListener('change', updatePlaceholder);
+          checkbox.addEventListener('change', updateMultiSelect);
         });
 
-        // Form validation
+        // Custom Select Logic
+        customTrigger.addEventListener('click', function(e) {
+          e.preventDefault();
+          closeAllDropdowns();
+          const isOpen = customSelect.classList.toggle('open');
+          customArrow.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+        });
+
+        customOptions.forEach(option => {
+          option.addEventListener('click', function() {
+            const value = this.getAttribute('data-value');
+            const text = this.querySelector('span').textContent;
+            
+            customPlaceholder.textContent = text;
+            customTrigger.classList.add('has-selection');
+            hiddenInput.value = value;
+            
+            customSelect.classList.remove('open');
+            customArrow.style.transform = 'rotate(0deg)';
+          });
+        });
+
+        // Close dropdowns when clicking outside
+        function closeAllDropdowns() {
+          multiSelect.classList.remove('open');
+          customSelect.classList.remove('open');
+          multiArrow.style.transform = 'rotate(0deg)';
+          customArrow.style.transform = 'rotate(0deg)';
+        }
+
+        document.addEventListener('click', function(e) {
+          if (!multiSelect.contains(e.target) && !customSelect.contains(e.target)) {
+            closeAllDropdowns();
+          }
+        });
+
+        // Enhanced Form Submission
         form.addEventListener('submit', function(e) {
-          const hasSelection = Array.from(checkboxes).some(cb => cb.checked);
-          if (!hasSelection) {
-            e.preventDefault();
+          e.preventDefault();
+          
+          // Validation
+          const hasServices = Array.from(checkboxes).some(cb => cb.checked);
+          const hasOrgType = hiddenInput.value !== '';
+          
+          if (!hasServices) {
             alert('Please select at least one service of interest.');
             multiSelect.classList.add('open');
-            arrow.style.transform = 'rotate(180deg)';
+            multiArrow.style.transform = 'rotate(180deg)';
             return false;
           }
+          
+          if (!hasOrgType) {
+            alert('Please select your organization type.');
+            customSelect.classList.add('open');
+            customArrow.style.transform = 'rotate(180deg)';
+            return false;
+          }
+
+          // Show loading state
+          submitBtn.classList.add('loading');
+          
+          // Submit form (Netlify will handle it)
+          setTimeout(() => {
+            form.submit();
+          }, 500);
         });
       });
     </script>
