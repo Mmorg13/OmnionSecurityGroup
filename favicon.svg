@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Omnion">
+  <title>Omnion</title>
+  <defs>
+    <linearGradient id="omnionDot" x1="18" y1="18" x2="46" y2="46" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1C5DFF"/>
+      <stop offset="1" stop-color="#9ED0FF"/>
+    </linearGradient>
+    <radialGradient id="omnionGlow" cx="32" cy="32" r="32" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1C5DFF" stop-opacity="0.00"/>
+      <stop offset="0.55" stop-color="#1C5DFF" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#1C5DFF" stop-opacity="0.00"/>
+    </radialGradient>
+  </defs>
+
+  <!-- transparent background; circular art only -->
+  <circle cx="32" cy="32" r="30" fill="url(#omnionGlow)"/>
+  <circle cx="32" cy="32" r="18" fill="url(#omnionDot)"/>
+  <circle cx="26" cy="26" r="8.5" fill="#ffffff" opacity="0.16"/>
+</svg>
