@@ -1,15 +1,41 @@
-<!-- contact.html -->
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Contact | Omnion Security Group</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>Contact Omnion | Schedule Free Cybersecurity Consultation | CISSP Advisors</title>
+    <meta name="title" content="Contact Omnion | Schedule Free Cybersecurity Consultation | CISSP Advisors" />
     <meta
       name="description"
-      content="Contact Omnion Security Group to schedule a cybersecurity consultation or request an assessment."
+      content="Schedule a free cybersecurity consultation with CISSP-certified advisors. Get practical security guidance, risk assessment, and clear next steps for your organization."
     />
+    <meta name="keywords" content="cybersecurity consultation, security advisor contact, CISSP consultant, free security assessment, cybersecurity quote" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://omnionsecurity.com/contact.html" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://omnionsecurity.com/contact.html" />
+    <meta property="og:title" content="Contact Omnion | Free Cybersecurity Consultation" />
+    <meta property="og:description" content="Schedule a free consultation with CISSP-certified cybersecurity advisors. Get practical guidance and clear next steps." />
+    <meta property="og:site_name" content="Omnion Security Group" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:url" content="https://omnionsecurity.com/contact.html" />
+    <meta property="twitter:title" content="Contact Omnion | Free Cybersecurity Consultation" />
+    <meta property="twitter:description" content="Schedule a free consultation with CISSP-certified cybersecurity advisors." />
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="manifest" href="/manifest.json" />
+    
     <meta name="theme-color" content="#0B1220" />
+    <link rel="preload" href="css/styles.css" as="style" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
 
@@ -35,164 +61,161 @@
       <section class="pagehero">
         <div class="container">
           <div class="pagehero__inner">
-            <h1>Contact</h1>
-            <p>Tell us what you're trying to accomplish. We'll recommend the best starting point.</p>
+            <h1>Let's secure your organization</h1>
+            <p>
+              Get expert cybersecurity guidance from CISSP-certified advisors. We'll assess your needs and provide a clear roadmap forward.
+            </p>
           </div>
         </div>
       </section>
 
       <section class="section">
         <div class="container">
-          <div class="contactgrid">
-            <div class="card card--lux">
-              <h2 class="h2">Request a consultation</h2>
-              <p class="muted">
-                Share some quick details about your organization and security needs. We'll respond within 1-2 business days with next steps.
-              </p>
+          <div class="contact-layout">
+            
+            <!-- Contact Form -->
+            <div class="contact-form-section">
+              <div class="card card--lux">
+                <h2>Request a consultation</h2>
+                <p class="contact-intro">
+                  Share some details about your organization and security needs. We'll respond within 1-2 business days with next steps.
+                </p>
 
-              <form name="contact" method="POST" netlify class="contact-form">
-                <div class="form-group modern-input">
-                  <input type="text" id="name" name="name" required placeholder=" ">
-                  <label for="name">Name *</label>
-                </div>
-
-                <div class="form-group modern-input">
-                  <input type="email" id="email" name="email" required placeholder=" ">
-                  <label for="email">Email *</label>
-                </div>
-
-                <div class="form-group modern-input">
-                  <input type="text" id="organization" name="organization" required placeholder=" ">
-                  <label for="organization">Organization *</label>
-                </div>
-
-                <div class="form-group">
-                  <label>Organization type *</label>
-                  <div class="custom-select" data-required="true">
-                    <div class="custom-select-trigger">
-                      <span class="custom-select-placeholder">Select organization type...</span>
-                      <div class="custom-select-arrow">▼</div>
-                    </div>
-                    <div class="custom-select-options">
-                      <div class="custom-select-option" data-value="nonprofit">
-                        <span>Nonprofit</span>
-                      </div>
-                      <div class="custom-select-option" data-value="small-business">
-                        <span>Small Business (1-50 employees)</span>
-                      </div>
-                      <div class="custom-select-option" data-value="mid-business">
-                        <span>Medium Business (50-200 employees)</span>
-                      </div>
-                      <div class="custom-select-option" data-value="enterprise">
-                        <span>Enterprise (200+ employees)</span>
-                      </div>
-                      <div class="custom-select-option" data-value="other">
-                        <span>Other</span>
-                      </div>
-                    </div>
-                    <input type="hidden" name="org-type" required>
+                <form name="contact" method="POST" netlify class="modern-form">
+                  
+                  <!-- Name Field -->
+                  <div class="field-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required />
                   </div>
-                </div>
 
-                <div class="form-group">
-                  <label>Services of interest *</label>
-                  <div class="multi-select" data-required="true">
-                    <div class="multi-select-trigger">
-                      <span class="multi-select-placeholder">Select services...</span>
-                      <div class="multi-select-arrow">▼</div>
-                    </div>
-                    <div class="multi-select-options">
-                      <label class="multi-select-option">
-                        <input type="checkbox" name="services-needed" value="security-foundations">
-                        <span>Security Foundations (Get audit-ready)</span>
-                      </label>
-                      <label class="multi-select-option">
-                        <input type="checkbox" name="services-needed" value="strategic-advisory">
-                        <span>Strategic Security Advisory (Build roadmap)</span>
-                      </label>
-                      <label class="multi-select-option">
-                        <input type="checkbox" name="services-needed" value="security-assessment">
-                        <span>Security Assessment & Remediation</span>
-                      </label>
-                      <label class="multi-select-option">
-                        <input type="checkbox" name="services-needed" value="ai-security">
-                        <span>AI Security & Responsible AI Advisory</span>
-                      </label>
-                      <label class="multi-select-option">
-                        <input type="checkbox" name="services-needed" value="tool-optimization">
-                        <span>Security Tool Optimization</span>
-                      </label>
-                      <label class="multi-select-option">
-                        <input type="checkbox" name="services-needed" value="security-training">
-                        <span>Security Education & Training</span>
-                      </label>
-                      <label class="multi-select-option">
-                        <input type="checkbox" name="services-needed" value="not-sure">
-                        <span>Not sure - need guidance</span>
-                      </label>
-                    </div>
+                  <!-- Email Field -->
+                  <div class="field-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required />
                   </div>
-                </div>
 
-                <div class="form-group modern-textarea">
-                  <textarea id="message" name="message" rows="4" placeholder=" "></textarea>
-                  <label for="message">Additional details</label>
-                  <div class="textarea-hint">Timeline, budget considerations, current tools, specific concerns...</div>
-                </div>
-
-                <button type="submit" class="btn btn--primary modern-btn">
-                  <span class="btn-text">Send consultation request</span>
-                  <div class="btn-loading">
-                    <div class="loading-spinner"></div>
-                    <span>Sending...</span>
+                  <!-- Organization Field -->
+                  <div class="field-group">
+                    <label for="organization">Organization *</label>
+                    <input type="text" id="organization" name="organization" required />
                   </div>
-                </button>
-              </form>
-            </div>
 
-            <div class="card card--lux">
-              <h2 class="h2">What happens next</h2>
-              <div class="steps-list">
-                <div class="step-item">
-                  <div class="step-number">1</div>
-                  <div class="step-content">
-                    <h3>We review your request</h3>
-                    <p>Our team evaluates your needs and prepares tailored recommendations.</p>
+                  <!-- Organization Size -->
+                  <div class="field-group">
+                    <label for="org-size">Organization Size *</label>
+                    <select id="org-size" name="org-size" required class="modern-select">
+                      <option value="">Select size</option>
+                      <option value="1-10">1-10 employees</option>
+                      <option value="11-50">11-50 employees</option>
+                      <option value="51-200">51-200 employees</option>
+                      <option value="201-1000">201-1000 employees</option>
+                      <option value="1000+">1000+ employees</option>
+                      <option value="nonprofit">Nonprofit</option>
+                      <option value="other">Other</option>
+                    </select>
                   </div>
-                </div>
-                
-                <div class="step-item">
-                  <div class="step-number">2</div>
-                  <div class="step-content">
-                    <h3>Initial consultation call</h3>
-                    <p>30-minute discussion to understand your environment and priorities.</p>
-                  </div>
-                </div>
-                
-                <div class="step-item">
-                  <div class="step-number">3</div>
-                  <div class="step-content">
-                    <h3>Customized proposal</h3>
-                    <p>Clear scope, timeline, deliverables, and pricing for your engagement.</p>
-                  </div>
-                </div>
-              </div>
 
-              <div class="panel panel--alt">
-                <div class="panel__tag">What you'll get</div>
-                <ul class="checklist">
-                  <li>Risk-based security priorities</li>
-                  <li>Clear, actionable roadmap</li>
-                  <li>Executive-ready deliverables</li>
-                  <li>Optional hands-on remediation support</li>
-                </ul>
-              </div>
+                  <!-- Primary Need -->
+                  <div class="field-group">
+                    <label for="primary-need">Primary Need *</label>
+                    <select id="primary-need" name="primary-need" required class="modern-select">
+                      <option value="">What's your main priority?</option>
+                      <option value="assessment">Security assessment & audit</option>
+                      <option value="strategy">Strategic security planning</option>
+                      <option value="compliance">Compliance & regulations</option>
+                      <option value="incident">Incident response</option>
+                      <option value="training">Security training</option>
+                      <option value="ai-security">AI security guidance</option>
+                      <option value="not-sure">Not sure - need guidance</option>
+                    </select>
+                  </div>
 
-              <div class="contact-info">
-                <p class="muted"><strong>Email:</strong> contact@omnionsecurity.com</p>
-                <p class="muted"><strong>Response time:</strong> 1-2 business days</p>
+                  <!-- Timeline -->
+                  <div class="field-group">
+                    <label for="timeline">Timeline</label>
+                    <select id="timeline" name="timeline" class="modern-select">
+                      <option value="">When do you need help?</option>
+                      <option value="urgent">Urgent (within 2 weeks)</option>
+                      <option value="soon">Soon (1-3 months)</option>
+                      <option value="planning">Planning ahead (3-6 months)</option>
+                      <option value="flexible">Flexible timing</option>
+                    </select>
+                  </div>
+
+                  <!-- Message -->
+                  <div class="field-group">
+                    <label for="message">Additional Details</label>
+                    <textarea 
+                      id="message" 
+                      name="message" 
+                      rows="4" 
+                      placeholder="Tell us about your current security setup, specific concerns, budget considerations, or any other relevant details..."
+                    ></textarea>
+                  </div>
+
+                  <!-- Submit Button -->
+                  <button type="submit" class="btn btn--primary btn--large">
+                    Send consultation request
+                  </button>
+
+                </form>
               </div>
             </div>
+
+            <!-- What Happens Next -->
+            <div class="contact-info-section">
+              <div class="card card--soft">
+                <h2>What happens next</h2>
+                
+                <div class="process-steps">
+                  <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                      <h3>We review your request</h3>
+                      <p>Our team evaluates your needs and prepares tailored recommendations.</p>
+                    </div>
+                  </div>
+                  
+                  <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                      <h3>Initial consultation call</h3>
+                      <p>30-minute discussion to understand your environment and priorities.</p>
+                    </div>
+                  </div>
+                  
+                  <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                      <h3>Customized proposal</h3>
+                      <p>Clear scope, timeline, deliverables, and pricing for your engagement.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="consultation-benefits">
+                  <h4>What you'll get</h4>
+                  <ul class="benefits-list">
+                    <li>Risk-based security priorities</li>
+                    <li>Clear, actionable roadmap</li>
+                    <li>Executive-ready deliverables</li>
+                    <li>Optional hands-on remediation support</li>
+                  </ul>
+                </div>
+
+                <div class="contact-details">
+                  <div class="contact-item">
+                    <strong>Email:</strong> contact@omnionsecurity.com
+                  </div>
+                  <div class="contact-item">
+                    <strong>Response time:</strong> 1-2 business days
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -221,118 +244,40 @@
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
     
-    <!-- Modern Form Functionality -->
+    <!-- Contact Form JavaScript -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        // Multi-Select Dropdown
-        const multiSelect = document.querySelector('.multi-select');
-        const multiTrigger = multiSelect.querySelector('.multi-select-trigger');
-        const multiPlaceholder = multiSelect.querySelector('.multi-select-placeholder');
-        const multiArrow = multiSelect.querySelector('.multi-select-arrow');
-        const checkboxes = multiSelect.querySelectorAll('input[type="checkbox"]');
+        const form = document.querySelector('.modern-form');
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.textContent;
 
-        // Custom Select Dropdown  
-        const customSelect = document.querySelector('.custom-select');
-        const customTrigger = customSelect.querySelector('.custom-select-trigger');
-        const customPlaceholder = customSelect.querySelector('.custom-select-placeholder');
-        const customArrow = customSelect.querySelector('.custom-select-arrow');
-        const customOptions = customSelect.querySelectorAll('.custom-select-option');
-        const hiddenInput = customSelect.querySelector('input[type="hidden"]');
-
-        const form = document.querySelector('form[name="contact"]');
-        const submitBtn = form.querySelector('.modern-btn');
-
-        // Multi-Select Logic
-        multiTrigger.addEventListener('click', function(e) {
-          e.preventDefault();
-          closeAllDropdowns();
-          const isOpen = multiSelect.classList.toggle('open');
-          multiArrow.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
-        });
-
-        function updateMultiSelect() {
-          const selected = Array.from(checkboxes).filter(cb => cb.checked);
-          if (selected.length === 0) {
-            multiPlaceholder.textContent = 'Select services...';
-            multiTrigger.classList.remove('has-selection');
-          } else if (selected.length === 1) {
-            multiPlaceholder.textContent = selected[0].nextElementSibling.textContent;
-            multiTrigger.classList.add('has-selection');
-          } else {
-            multiPlaceholder.textContent = `${selected.length} services selected`;
-            multiTrigger.classList.add('has-selection');
-          }
-        }
-
-        checkboxes.forEach(checkbox => {
-          checkbox.addEventListener('change', updateMultiSelect);
-        });
-
-        // Custom Select Logic
-        customTrigger.addEventListener('click', function(e) {
-          e.preventDefault();
-          closeAllDropdowns();
-          const isOpen = customSelect.classList.toggle('open');
-          customArrow.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
-        });
-
-        customOptions.forEach(option => {
-          option.addEventListener('click', function() {
-            const value = this.getAttribute('data-value');
-            const text = this.querySelector('span').textContent;
-            
-            customPlaceholder.textContent = text;
-            customTrigger.classList.add('has-selection');
-            hiddenInput.value = value;
-            
-            customSelect.classList.remove('open');
-            customArrow.style.transform = 'rotate(0deg)';
-          });
-        });
-
-        // Close dropdowns when clicking outside
-        function closeAllDropdowns() {
-          multiSelect.classList.remove('open');
-          customSelect.classList.remove('open');
-          multiArrow.style.transform = 'rotate(0deg)';
-          customArrow.style.transform = 'rotate(0deg)';
-        }
-
-        document.addEventListener('click', function(e) {
-          if (!multiSelect.contains(e.target) && !customSelect.contains(e.target)) {
-            closeAllDropdowns();
-          }
-        });
-
-        // Enhanced Form Submission
         form.addEventListener('submit', function(e) {
-          e.preventDefault();
-          
-          // Validation
-          const hasServices = Array.from(checkboxes).some(cb => cb.checked);
-          const hasOrgType = hiddenInput.value !== '';
-          
-          if (!hasServices) {
-            alert('Please select at least one service of interest.');
-            multiSelect.classList.add('open');
-            multiArrow.style.transform = 'rotate(180deg)';
-            return false;
-          }
-          
-          if (!hasOrgType) {
-            alert('Please select your organization type.');
-            customSelect.classList.add('open');
-            customArrow.style.transform = 'rotate(180deg)';
-            return false;
-          }
-
           // Show loading state
-          submitBtn.classList.add('loading');
+          submitBtn.textContent = 'Sending...';
+          submitBtn.disabled = true;
+          submitBtn.style.opacity = '0.7';
           
-          // Submit form (Netlify will handle it)
-          setTimeout(() => {
-            form.submit();
-          }, 500);
+          // Let Netlify handle the actual submission
+          // The loading state will show until the page redirects or reloads
+        });
+
+        // Enhanced form validation and UX
+        const requiredFields = form.querySelectorAll('[required]');
+        
+        requiredFields.forEach(field => {
+          field.addEventListener('blur', function() {
+            if (this.value.trim() === '') {
+              this.classList.add('error');
+            } else {
+              this.classList.remove('error');
+            }
+          });
+
+          field.addEventListener('input', function() {
+            if (this.classList.contains('error') && this.value.trim() !== '') {
+              this.classList.remove('error');
+            }
+          });
         });
       });
     </script>
