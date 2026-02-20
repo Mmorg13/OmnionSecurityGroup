@@ -6,7 +6,7 @@
     
     <!-- Primary Meta Tags -->
     <title>Contact Omnion | Cybersecurity Consultants Central PA | York, Harrisburg, Lancaster</title>
-    <meta name="title" content="Contact Omnion | Schedule Free Cybersecurity Consultation | CISSP Advisors" />
+    <meta name="title" content="Contact Omnion | Cybersecurity Consultants Central PA | York, Harrisburg, Lancaster" />
     <meta
       name="description"
       content="Schedule a free cybersecurity consultation with CISSP-certified advisors. Get practical security guidance, risk assessment, and clear next steps for your organization."
@@ -81,11 +81,15 @@
                   Share some details about your organization and security needs. We'll respond within 1-2 business days with next steps.
                 </p>
 
-                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="modern-form">
-                  <!-- Form identifier for Netlify -->
-                  <input type="hidden" name="form-name" value="contact">
+                <form name="contact" method="POST" action="https://formsubmit.co/morganbusiness@yahoo.com" class="modern-form">
+                  <!-- FormSubmit configuration -->
+                  <input type="hidden" name="_subject" value="New Consultation Request - Omnion Security Group">
+                  <input type="hidden" name="_next" value="https://omnionsecurity.com/success.html">
+                  <input type="hidden" name="_captcha" value="false">
+                  <input type="hidden" name="_template" value="table">
                   <!-- Bot protection -->
-                  <input type="email" name="bot-field" style="display: none;" tabindex="-1" autocomplete="off">
+                  <input type="email" name="_honey" style="display: none;" tabindex="-1" autocomplete="off">
+                  <input type="hidden" name="submission-time" id="submission-time" value="">
                   
                   <!-- Name Field -->
                   <div class="field-group">
@@ -448,7 +452,7 @@
           }
 
           // Bot Protection: Check honeypot field
-          const honeypot = document.querySelector('input[name="bot-field"]');
+          const honeypot = document.querySelector('input[name="_honey"]');
           if (honeypot && honeypot.value !== '') {
             e.preventDefault();
             // Silently block bot submissions
@@ -487,28 +491,8 @@
             return false;
           }
 
-          // Show enhanced loading state
+          // Show enhanced loading state and allow normal form submission
           showSubmissionProgress();
-          
-          // Add slight delay to show progress (improves UX)
-          setTimeout(() => {
-            // Submit form and redirect to success page
-            const formData = new FormData(form);
-            
-            fetch('/', {
-              method: 'POST',
-              headers: { "Content-Type": "application/x-www-form-urlencoded" },
-              body: new URLSearchParams(formData).toString()
-            })
-            .then(() => {
-              window.location.href = 'success.html';
-            })
-            .catch((error) => {
-              console.error('Error:', error);
-              // Fallback: try standard form submission
-              form.submit();
-            });
-          }, 800);
         });
 
         // Enhanced user feedback functions

@@ -1,0 +1,16 @@
+{
+  "name": "Omnion Security Group",
+  "short_name": "Omnion",
+  "description": "Cybersecurity consulting for Central PA organizations",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B1220",
+  "theme_color": "#1C5DFF",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
