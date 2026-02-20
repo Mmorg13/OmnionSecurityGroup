@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
     <!-- Primary Meta Tags -->
-    <title>Contact Omnion | Schedule Free Cybersecurity Consultation | CISSP Advisors</title>
+    <title>Contact Omnion | Cybersecurity Consultants Central PA | York, Harrisburg, Lancaster</title>
     <meta name="title" content="Contact Omnion | Schedule Free Cybersecurity Consultation | CISSP Advisors" />
     <meta
       name="description"
@@ -81,7 +81,11 @@
                   Share some details about your organization and security needs. We'll respond within 1-2 business days with next steps.
                 </p>
 
-                <form name="contact" method="POST" netlify class="modern-form">
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="modern-form">
+                  <!-- Form identifier for Netlify -->
+                  <input type="hidden" name="form-name" value="contact">
+                  <!-- Bot protection -->
+                  <input type="email" name="bot-field" style="display: none;" tabindex="-1" autocomplete="off">
                   
                   <!-- Name Field -->
                   <div class="field-group">
@@ -103,44 +107,104 @@
 
                   <!-- Organization Size -->
                   <div class="field-group">
-                    <label for="org-size">Organization Size *</label>
-                    <select id="org-size" name="org-size" required class="modern-select">
-                      <option value="">Select size</option>
-                      <option value="1-10">1-10 employees</option>
-                      <option value="11-50">11-50 employees</option>
-                      <option value="51-200">51-200 employees</option>
-                      <option value="201-1000">201-1000 employees</option>
-                      <option value="1000+">1000+ employees</option>
-                      <option value="nonprofit">Nonprofit</option>
-                      <option value="other">Other</option>
-                    </select>
+                    <label>Organization Size *</label>
+                    <div class="single-select-dropdown" data-required="true">
+                      <div class="single-select-trigger">
+                        <span class="single-select-placeholder">Select size</span>
+                        <div class="single-select-arrow">▼</div>
+                      </div>
+                      <div class="single-select-options">
+                        <div class="single-select-option" data-value="1-10">
+                          <span>1-10 employees</span>
+                        </div>
+                        <div class="single-select-option" data-value="11-50">
+                          <span>11-50 employees</span>
+                        </div>
+                        <div class="single-select-option" data-value="51-200">
+                          <span>51-200 employees</span>
+                        </div>
+                        <div class="single-select-option" data-value="201-1000">
+                          <span>201-1000 employees</span>
+                        </div>
+                        <div class="single-select-option" data-value="1000+">
+                          <span>1000+ employees</span>
+                        </div>
+                        <div class="single-select-option" data-value="nonprofit">
+                          <span>Nonprofit</span>
+                        </div>
+                        <div class="single-select-option" data-value="other">
+                          <span>Other</span>
+                        </div>
+                      </div>
+                      <input type="hidden" name="org-size" required>
+                    </div>
                   </div>
 
-                  <!-- Primary Need -->
+                  <!-- Services Needed -->
                   <div class="field-group">
-                    <label for="primary-need">Primary Need *</label>
-                    <select id="primary-need" name="primary-need" required class="modern-select">
-                      <option value="">What's your main priority?</option>
-                      <option value="assessment">Security assessment & audit</option>
-                      <option value="strategy">Strategic security planning</option>
-                      <option value="compliance">Compliance & regulations</option>
-                      <option value="incident">Incident response</option>
-                      <option value="training">Security training</option>
-                      <option value="ai-security">AI security guidance</option>
-                      <option value="not-sure">Not sure - need guidance</option>
-                    </select>
+                    <label>Services Needed *</label>
+                    <div class="multi-select-dropdown" data-required="true">
+                      <div class="multi-select-trigger">
+                        <span class="multi-select-placeholder">Select services you need...</span>
+                        <div class="multi-select-arrow">▼</div>
+                      </div>
+                      <div class="multi-select-options">
+                        <label class="multi-select-option">
+                          <input type="checkbox" name="services-needed" value="security-foundations">
+                          <span>Security Foundations (Get audit-ready)</span>
+                        </label>
+                        <label class="multi-select-option">
+                          <input type="checkbox" name="services-needed" value="strategic-advisory">
+                          <span>Strategic Security Advisory (Build roadmap)</span>
+                        </label>
+                        <label class="multi-select-option">
+                          <input type="checkbox" name="services-needed" value="assessments-remediation">
+                          <span>Security Assessments & Remediation (Find & fix vulnerabilities)</span>
+                        </label>
+                        <label class="multi-select-option">
+                          <input type="checkbox" name="services-needed" value="ai-security">
+                          <span>AI Security & Responsible AI Advisory (Adopt AI safely)</span>
+                        </label>
+                        <label class="multi-select-option">
+                          <input type="checkbox" name="services-needed" value="tool-optimization">
+                          <span>Security Tool Optimization (Turn spend into ROI)</span>
+                        </label>
+                        <label class="multi-select-option">
+                          <input type="checkbox" name="services-needed" value="education-training">
+                          <span>Security Education & Training (Build security-aware teams)</span>
+                        </label>
+                        <label class="multi-select-option">
+                          <input type="checkbox" name="services-needed" value="not-sure">
+                          <span>Not sure - need guidance</span>
+                        </label>
+                      </div>
+                    </div>
                   </div>
 
                   <!-- Timeline -->
                   <div class="field-group">
-                    <label for="timeline">Timeline</label>
-                    <select id="timeline" name="timeline" class="modern-select">
-                      <option value="">When do you need help?</option>
-                      <option value="urgent">Urgent (within 2 weeks)</option>
-                      <option value="soon">Soon (1-3 months)</option>
-                      <option value="planning">Planning ahead (3-6 months)</option>
-                      <option value="flexible">Flexible timing</option>
-                    </select>
+                    <label>Timeline</label>
+                    <div class="single-select-dropdown">
+                      <div class="single-select-trigger">
+                        <span class="single-select-placeholder">When do you need help?</span>
+                        <div class="single-select-arrow">▼</div>
+                      </div>
+                      <div class="single-select-options">
+                        <div class="single-select-option" data-value="urgent">
+                          <span>Urgent (within 2 weeks)</span>
+                        </div>
+                        <div class="single-select-option" data-value="soon">
+                          <span>Soon (1-3 months)</span>
+                        </div>
+                        <div class="single-select-option" data-value="planning">
+                          <span>Planning ahead (3-6 months)</span>
+                        </div>
+                        <div class="single-select-option" data-value="flexible">
+                          <span>Flexible timing</span>
+                        </div>
+                      </div>
+                      <input type="hidden" name="timeline">
+                    </div>
                   </div>
 
                   <!-- Message -->
@@ -251,17 +315,248 @@
         const submitBtn = form.querySelector('button[type="submit"]');
         const originalBtnText = submitBtn.textContent;
 
-        form.addEventListener('submit', function(e) {
-          // Show loading state
-          submitBtn.textContent = 'Sending...';
-          submitBtn.disabled = true;
-          submitBtn.style.opacity = '0.7';
-          
-          // Let Netlify handle the actual submission
-          // The loading state will show until the page redirects or reloads
+        // Bot Protection: Record form load time
+        const formLoadTime = Date.now();
+        const minFormTime = 3000; // Minimum 3 seconds to fill form (humans take longer than bots)
+
+        // Multi-select dropdown functionality
+        const multiSelect = document.querySelector('.multi-select-dropdown');
+        const trigger = multiSelect.querySelector('.multi-select-trigger');
+        const placeholder = multiSelect.querySelector('.multi-select-placeholder');
+        const arrow = multiSelect.querySelector('.multi-select-arrow');
+        const options = multiSelect.querySelector('.multi-select-options');
+        const checkboxes = multiSelect.querySelectorAll('input[type="checkbox"]');
+
+        // Toggle dropdown
+        trigger.addEventListener('click', function(e) {
+          e.preventDefault();
+          const isOpen = multiSelect.classList.toggle('open');
+          arrow.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
         });
 
-        // Enhanced form validation and UX
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+          if (!multiSelect.contains(e.target)) {
+            multiSelect.classList.remove('open');
+            arrow.style.transform = 'rotate(0deg)';
+          }
+        });
+
+        // Update placeholder text based on selections
+        function updatePlaceholder() {
+          const selected = Array.from(checkboxes).filter(cb => cb.checked);
+          if (selected.length === 0) {
+            placeholder.textContent = 'Select services you need...';
+            trigger.classList.remove('has-selection');
+          } else if (selected.length === 1) {
+            // Show the first part of the service name for single selection
+            const serviceName = selected[0].nextElementSibling.textContent.split(' (')[0];
+            placeholder.textContent = serviceName;
+            trigger.classList.add('has-selection');
+          } else {
+            placeholder.textContent = `${selected.length} services selected`;
+            trigger.classList.add('has-selection');
+          }
+        }
+
+        // Handle checkbox changes
+        checkboxes.forEach(checkbox => {
+          checkbox.addEventListener('change', updatePlaceholder);
+        });
+
+        // Single-select dropdowns functionality
+        const singleSelects = document.querySelectorAll('.single-select-dropdown');
+        
+        singleSelects.forEach(singleSelect => {
+          const trigger = singleSelect.querySelector('.single-select-trigger');
+          const placeholder = singleSelect.querySelector('.single-select-placeholder');
+          const arrow = singleSelect.querySelector('.single-select-arrow');
+          const options = singleSelect.querySelectorAll('.single-select-option');
+          const hiddenInput = singleSelect.querySelector('input[type="hidden"]');
+
+          // Toggle dropdown
+          trigger.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Close other dropdowns
+            singleSelects.forEach(other => {
+              if (other !== singleSelect) {
+                other.classList.remove('open');
+                other.querySelector('.single-select-arrow').style.transform = 'rotate(0deg)';
+              }
+            });
+            multiSelect.classList.remove('open');
+            multiSelect.querySelector('.multi-select-arrow').style.transform = 'rotate(0deg)';
+            
+            // Toggle this dropdown
+            const isOpen = singleSelect.classList.toggle('open');
+            arrow.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+          });
+
+          // Handle option selection
+          options.forEach(option => {
+            option.addEventListener('click', function() {
+              const value = this.getAttribute('data-value');
+              const text = this.querySelector('span').textContent;
+              
+              // Update UI
+              placeholder.textContent = text;
+              trigger.classList.add('has-selection');
+              hiddenInput.value = value;
+              
+              // Update selected state
+              options.forEach(opt => opt.classList.remove('selected'));
+              this.classList.add('selected');
+              
+              // Close dropdown
+              singleSelect.classList.remove('open');
+              arrow.style.transform = 'rotate(0deg)';
+            });
+          });
+        });
+
+        // Close all dropdowns when clicking outside
+        document.addEventListener('click', function(e) {
+          const isDropdownClick = e.target.closest('.multi-select-dropdown') || 
+                                 e.target.closest('.single-select-dropdown');
+          
+          if (!isDropdownClick) {
+            // Close multi-select
+            multiSelect.classList.remove('open');
+            multiSelect.querySelector('.multi-select-arrow').style.transform = 'rotate(0deg)';
+            
+            // Close single-selects
+            singleSelects.forEach(singleSelect => {
+              singleSelect.classList.remove('open');
+              singleSelect.querySelector('.single-select-arrow').style.transform = 'rotate(0deg)';
+            });
+          }
+        });
+
+        // Enhanced form validation with bot protection
+        form.addEventListener('submit', function(e) {
+          let hasError = false;
+
+          // Bot Protection: Check form completion time
+          const submissionTime = Date.now();
+          const timeTaken = submissionTime - formLoadTime;
+          
+          if (timeTaken < minFormTime) {
+            e.preventDefault();
+            alert('Please take a moment to review your information before submitting.');
+            return false;
+          }
+
+          // Bot Protection: Check honeypot field
+          const honeypot = document.querySelector('input[name="bot-field"]');
+          if (honeypot && honeypot.value !== '') {
+            e.preventDefault();
+            // Silently block bot submissions
+            return false;
+          }
+
+          // Set submission timestamp
+          document.getElementById('submission-time').value = new Date().toISOString();
+
+          // Check if at least one service is selected
+          const hasServices = Array.from(checkboxes).some(cb => cb.checked);
+          
+          if (!hasServices) {
+            e.preventDefault();
+            showFormError('Please select at least one service you need help with.');
+            multiSelect.classList.add('open');
+            multiSelect.querySelector('.multi-select-arrow').style.transform = 'rotate(180deg)';
+            hasError = true;
+          }
+
+          // Check required single-select dropdowns
+          const requiredSingleSelects = document.querySelectorAll('.single-select-dropdown[data-required="true"]');
+          requiredSingleSelects.forEach(singleSelect => {
+            const hiddenInput = singleSelect.querySelector('input[type="hidden"]');
+            if (!hiddenInput.value) {
+              e.preventDefault();
+              const label = singleSelect.closest('.field-group').querySelector('label').textContent;
+              showFormError(`Please select your ${label.replace(' *', '').toLowerCase()}.`);
+              singleSelect.classList.add('open');
+              singleSelect.querySelector('.single-select-arrow').style.transform = 'rotate(180deg)';
+              hasError = true;
+            }
+          });
+
+          if (hasError) {
+            return false;
+          }
+
+          // Show enhanced loading state
+          showSubmissionProgress();
+          
+          // Add slight delay to show progress (improves UX)
+          setTimeout(() => {
+            // Submit form and redirect to success page
+            const formData = new FormData(form);
+            
+            fetch('/', {
+              method: 'POST',
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: new URLSearchParams(formData).toString()
+            })
+            .then(() => {
+              window.location.href = 'success.html';
+            })
+            .catch((error) => {
+              console.error('Error:', error);
+              // Fallback: try standard form submission
+              form.submit();
+            });
+          }, 800);
+        });
+
+        // Enhanced user feedback functions
+        function showFormError(message) {
+          // Create or update error message
+          let errorDiv = document.querySelector('.form-error');
+          if (!errorDiv) {
+            errorDiv = document.createElement('div');
+            errorDiv.className = 'form-error';
+            form.insertBefore(errorDiv, form.firstChild);
+          }
+          errorDiv.textContent = message;
+          errorDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          
+          // Remove error after 5 seconds
+          setTimeout(() => {
+            if (errorDiv) errorDiv.remove();
+          }, 5000);
+        }
+
+        function showSubmissionProgress() {
+          // Update button with progress
+          submitBtn.innerHTML = `
+            <div style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+              <div style="width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.3); border-top: 2px solid white; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+              <span>Sending your request...</span>
+            </div>
+          `;
+          submitBtn.disabled = true;
+          submitBtn.style.opacity = '0.8';
+          
+          // Show progress message
+          const progressDiv = document.createElement('div');
+          progressDiv.className = 'form-progress';
+          progressDiv.innerHTML = `
+            <div style="text-align: center; padding: 16px; background: rgba(28, 93, 255, 0.1); border-radius: 8px; margin-top: 16px;">
+              <p style="margin: 0; color: var(--accent); font-weight: 600;">
+                ✓ Sending your consultation request...
+              </p>
+              <p style="margin: 8px 0 0; color: var(--muted); font-size: 14px;">
+                You'll be redirected to a confirmation page shortly.
+              </p>
+            </div>
+          `;
+          form.appendChild(progressDiv);
+        }
+
+        // Enhanced form validation and UX for other fields
         const requiredFields = form.querySelectorAll('[required]');
         
         requiredFields.forEach(field => {
