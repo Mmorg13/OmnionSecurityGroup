@@ -1,13 +1,431 @@
+<!-- contact/index.html -->
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="noindex, nofollow" />
-    <script>
-      window.location.replace("/contact.html" + window.location.search + window.location.hash);
-    </script>
-    <title>Redirecting...</title>
+    <!-- Primary Meta Tags -->
+    <title>Contact Omnion | Cybersecurity Consultants Central PA | York, Harrisburg, Lancaster</title>
+    <meta name="title" content="Contact Omnion | Cybersecurity Consultants Central PA | York, Harrisburg, Lancaster" />
+    <meta
+      name="description"
+      content="Schedule a free cybersecurity consultation with CISSP-certified advisors. Get practical security guidance, risk assessment, and clear next steps for your organization."
+    />
+    <meta name="keywords" content="cybersecurity consultation, security advisor contact, CISSP consultant, free security assessment, cybersecurity quote" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://omnionsecurity.com/contact/" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://omnionsecurity.com/contact/" />
+    <meta property="og:title" content="Contact Omnion | Free Cybersecurity Consultation" />
+    <meta property="og:description" content="Schedule a free consultation with CISSP-certified cybersecurity advisors. Get practical guidance and clear next steps." />
+    <meta property="og:site_name" content="Omnion Security Group" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:url" content="https://omnionsecurity.com/contact/" />
+    <meta property="twitter:title" content="Contact Omnion | Free Cybersecurity Consultation" />
+    <meta property="twitter:description" content="Schedule a free consultation with CISSP-certified cybersecurity advisors." />
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="manifest" href="/manifest.json" />
+    
+    <meta name="theme-color" content="#0B1220" />
+    <link rel="preload" href="/css/styles.css" as="style" />
+    <link rel="stylesheet" href="/css/styles.css" />
   </head>
-  <body></body>
+
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a class="brand" href="/" aria-label="Omnion Security Group">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span class="brand__name">OMNION</span>
+          <span class="brand__sub">Security Group</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a class="nav__link" href="/">Home</a>
+          <a class="nav__link" href="/services/">Services</a>
+          <a class="nav__link" href="/about/">About</a>
+          <a class="btn btn--small" href="/contact/">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="pagehero">
+        <div class="container">
+          <div class="pagehero__inner">
+            <h1>Let's secure your organization</h1>
+            <p>
+              Get expert cybersecurity guidance from CISSP-certified advisors. We'll assess your needs and provide a clear roadmap forward.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="contact-layout">
+            <!-- Contact Form -->
+            <div class="contact-form-section">
+              <div class="card card--lux">
+                <h2>Request a consultation</h2>
+                <p class="contact-intro">
+                  Share some details about your organization and security needs. We'll respond within 1-2 business days with next steps.
+                </p>
+
+                <form name="contact" method="POST" action="https://formsubmit.co/morganbusiness@yahoo.com" class="modern-form">
+                  <!-- FormSubmit configuration -->
+                  <input type="hidden" name="_subject" value="New Consultation Request - Omnion Security Group">
+                  <input type="hidden" name="_next" value="https://omnionsecurity.com/success/">
+                  <input type="hidden" name="_captcha" value="false">
+                  <input type="hidden" name="_template" value="table">
+                  <!-- Bot protection -->
+                  <input type="email" name="_honey" style="display: none;" tabindex="-1" autocomplete="off">
+                  <input type="hidden" name="submission-time" id="submission-time" value="">
+                  
+                  <!-- Name Field -->
+                  <div class="field-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required />
+                  </div>
+
+                  <!-- Email Field -->
+                  <div class="field-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required />
+                  </div>
+
+                  <!-- Organization Field -->
+                  <div class="field-group">
+                    <label for="organization">Organization *</label>
+                    <input type="text" id="organization" name="organization" required />
+                  </div>
+
+                  <!-- Organization Size -->
+                  <div class="field-group">
+                    <label>Organization Size *</label>
+                    <div class="single-select-dropdown" data-required="true">
+                      <div class="single-select-trigger">
+                        <span class="single-select-placeholder">Select size</span>
+                        <div class="single-select-arrow">▼</div>
+                      </div>
+                      <div class="single-select-options">
+                        <div class="single-select-option" data-value="1-10">
+                          <span>1-10 employees</span>
+                        </div>
+                        <div class="single-select-option" data-value="11-50">
+                          <span>11-50 employees</span>
+                        </div>
+                        <div class="single-select-option" data-value="51-200">
+                          <span>51-200 employees</span>
+                        </div>
+                        <div class="single-select-option" data-value="201-1000">
+                          <span>201-1000 employees</span>
+                        </div>
+                        <div class="single-select-option" data-value="1000+">
+                          <span>1000+ employees</span>
+                        </div>
+                        <div class="single-select-option" data-value="nonprofit">
+                          <span>Nonprofit</span>
+                        </div>
+                        <div class="single-select-option" data-value="other">
+                          <span>Other</span>
+                        </div>
+                      </div>
+                      <input type="hidden" name="org-size" required>
+                    </div>
+                  </div>
+
+                  <!-- Services Needed -->
+                  <div class="field-group">
+                    <label>Services Needed *</label>
+                    <div class="multi-select-dropdown" data-required="true">
+                      <div class="multi-select-trigger">
+                        <span class="multi-select-placeholder">Select services you need...</span>
+                        <div class="multi-select-arrow">▼</div>
+                      </div>
+                      <div class="multi-select-options">
+                        <label class="multi-select-option">
+                          <input type="checkbox" name="services-needed" value="security-foundations">
+                          <span>Security Foundations (Get audit-ready)</span>
+                        </label>
+                        <label class="multi-select-option">
+                          <input type="checkbox" name="services-needed" value="strategic-advisory">
+                          <span>Strategic Security Advisory (Build roadmap)</span>
+                        </label>
+                        <label class="multi-select-option">
+                          <input type="checkbox" name="services-needed" value="assessments-remediation">
+                          <span>Security Assessments & Remediation (Find & fix vulnerabilities)</span>
+                        </label>
+                        <label class="multi-select-option">
+                          <input type="checkbox" name="services-needed" value="ai-security">
+                          <span>AI Security & Responsible AI Advisory (Adopt AI safely)</span>
+                        </label>
+                        <label class="multi-select-option">
+                          <input type="checkbox" name="services-needed" value="tool-optimization">
+                          <span>Security Tool Optimization (Turn spend into ROI)</span>
+                        </label>
+                        <label class="multi-select-option">
+                          <input type="checkbox" name="services-needed" value="education-training">
+                          <span>Security Education & Training (Build security-aware teams)</span>
+                        </label>
+                        <label class="multi-select-option">
+                          <input type="checkbox" name="services-needed" value="not-sure">
+                          <span>Not sure - need guidance</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Timeline -->
+                  <div class="field-group">
+                    <label>Timeline</label>
+                    <div class="single-select-dropdown">
+                      <div class="single-select-trigger">
+                        <span class="single-select-placeholder">When do you need help?</span>
+                        <div class="single-select-arrow">▼</div>
+                      </div>
+                      <div class="single-select-options">
+                        <div class="single-select-option" data-value="urgent">
+                          <span>Urgent (within 2 weeks)</span>
+                        </div>
+                        <div class="single-select-option" data-value="soon">
+                          <span>Soon (1-3 months)</span>
+                        </div>
+                        <div class="single-select-option" data-value="planning">
+                          <span>Planning ahead (3-6 months)</span>
+                        </div>
+                        <div class="single-select-option" data-value="flexible">
+                          <span>Flexible timing</span>
+                        </div>
+                      </div>
+                      <input type="hidden" name="timeline">
+                    </div>
+                  </div>
+
+                  <!-- Message -->
+                  <div class="field-group">
+                    <label for="message">Additional Details</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="4"
+                      placeholder="Tell us about your current security setup, specific concerns, budget considerations, or any other relevant details..."
+                    ></textarea>
+                  </div>
+
+                  <!-- Submit Button -->
+                  <button type="submit" class="btn btn--primary btn--large">
+                    Send consultation request
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            <!-- What Happens Next -->
+            <div class="contact-info-section">
+              <div class="card card--soft">
+                <h2>What happens next</h2>
+                
+                <div class="process-steps">
+                  <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                      <h3>We review your request</h3>
+                      <p>Our team evaluates your needs and prepares tailored recommendations.</p>
+                    </div>
+                  </div>
+                  
+                  <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                      <h3>Initial consultation call</h3>
+                      <p>30-minute discussion to understand your environment and priorities.</p>
+                    </div>
+                  </div>
+                  
+                  <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                      <h3>Customized proposal</h3>
+                      <p>Clear scope, timeline, deliverables, and pricing for your engagement.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="consultation-benefits">
+                  <h4>What you'll get</h4>
+                  <ul class="benefits-list">
+                    <li>Risk-based security priorities</li>
+                    <li>Clear, actionable roadmap</li>
+                    <li>Executive-ready deliverables</li>
+                    <li>Optional hands-on remediation support</li>
+                  </ul>
+                </div>
+
+                <div class="contact-details">
+                  <div class="contact-item">
+                    <strong>Email:</strong> contact@omnionsecurity.com
+                  </div>
+                  <div class="contact-item">
+                    <strong>Response time:</strong> 1-2 business days
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div>
+          <div class="footer__brand">OMNION Security Group</div>
+          <div class="footer__muted">Cybersecurity advisory, assessments, and operational support.</div>
+        </div>
+
+        <div class="footer__links">
+          <a href="/services/">Services</a>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+        </div>
+
+        <div class="footer__muted">
+          © <span id="year"></span> Omnion Security Group. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    
+    <!-- Contact Form JavaScript -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('.modern-form');
+        const submitBtn = form.querySelector('button[type=\"submit\"]');
+
+        // Bot Protection: Record form load time
+        const formLoadTime = Date.now();
+        const minFormTime = 3000; // Minimum 3 seconds
+
+        // Multi-select dropdown functionality
+        const multiSelect = document.querySelector('.multi-select-dropdown');
+        const multiTrigger = multiSelect.querySelector('.multi-select-trigger');
+        const multiPlaceholder = multiSelect.querySelector('.multi-select-placeholder');
+        const multiArrow = multiSelect.querySelector('.multi-select-arrow');
+        const checkboxes = multiSelect.querySelectorAll('input[type=\"checkbox\"]');
+
+        multiTrigger.addEventListener('click', function(e) {
+          e.preventDefault();
+          const isOpen = multiSelect.classList.toggle('open');
+          multiArrow.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+        });
+
+        function updateMultiPlaceholder() {
+          const selected = Array.from(checkboxes).filter(cb => cb.checked);
+          if (selected.length === 0) {
+            multiPlaceholder.textContent = 'Select services you need...';
+            multiTrigger.classList.remove('has-selection');
+          } else if (selected.length === 1) {
+            const serviceName = selected[0].nextElementSibling.textContent.split(' (')[0];
+            multiPlaceholder.textContent = serviceName;
+            multiTrigger.classList.add('has-selection');
+          } else {
+            multiPlaceholder.textContent = `${selected.length} services selected`;
+            multiTrigger.classList.add('has-selection');
+          }
+        }
+
+        checkboxes.forEach(cb => cb.addEventListener('change', updateMultiPlaceholder));
+
+        // Single-select dropdowns functionality
+        const singleSelects = document.querySelectorAll('.single-select-dropdown');
+        singleSelects.forEach(singleSelect => {
+          const trigger = singleSelect.querySelector('.single-select-trigger');
+          const placeholder = singleSelect.querySelector('.single-select-placeholder');
+          const arrow = singleSelect.querySelector('.single-select-arrow');
+          const options = singleSelect.querySelectorAll('.single-select-option');
+          const hiddenInput = singleSelect.querySelector('input[type=\"hidden\"]');
+
+          trigger.addEventListener('click', function(e) {
+            e.preventDefault();
+            singleSelects.forEach(other => {
+              if (other !== singleSelect) {
+                other.classList.remove('open');
+                other.querySelector('.single-select-arrow').style.transform = 'rotate(0deg)';
+              }
+            });
+            multiSelect.classList.remove('open');
+            multiArrow.style.transform = 'rotate(0deg)';
+            const isOpen = singleSelect.classList.toggle('open');
+            arrow.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+          });
+
+          options.forEach(option => {
+            option.addEventListener('click', function() {
+              const value = this.getAttribute('data-value');
+              const text = this.querySelector('span').textContent;
+              placeholder.textContent = text;
+              trigger.classList.add('has-selection');
+              hiddenInput.value = value;
+              options.forEach(opt => opt.classList.remove('selected'));
+              this.classList.add('selected');
+              singleSelect.classList.remove('open');
+              arrow.style.transform = 'rotate(0deg)';
+            });
+          });
+        });
+
+        document.addEventListener('click', function(e) {
+          const isDropdownClick = e.target.closest('.multi-select-dropdown') || e.target.closest('.single-select-dropdown');
+          if (!isDropdownClick) {
+            multiSelect.classList.remove('open');
+            multiArrow.style.transform = 'rotate(0deg)';
+            singleSelects.forEach(singleSelect => {
+              singleSelect.classList.remove('open');
+              singleSelect.querySelector('.single-select-arrow').style.transform = 'rotate(0deg)';
+            });
+          }
+        });
+
+        form.addEventListener('submit', function(e) {
+          const timeTaken = Date.now() - formLoadTime;
+          if (timeTaken < minFormTime) {
+            e.preventDefault();
+            alert('Please take a moment to review your information before submitting.');
+            return false;
+          }
+          const honeypot = document.querySelector('input[name=\"_honey\"]');
+          if (honeypot && honeypot.value !== '') {
+            e.preventDefault();
+            return false;
+          }
+          document.getElementById('submission-time').value = new Date().toISOString();
+          const hasServices = Array.from(checkboxes).some(cb => cb.checked);
+          if (!hasServices) {
+            e.preventDefault();
+            alert('Please select at least one service you need help with.');
+            multiSelect.classList.add('open');
+            multiArrow.style.transform = 'rotate(180deg)';
+            return false;
+          }
+          submitBtn.disabled = true;
+          submitBtn.style.opacity = '0.85';
+          submitBtn.textContent = 'Sending...';
+        });
+      });
+    </script>
+    
+    <script src="/js/main.js"></script>
+  </body>
 </html>
