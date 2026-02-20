@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Redirecting | Omnion Security Group</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <script>
+      (function () {
+        var path = window.location.pathname;
+        var clean = path.endsWith("/") ? path.slice(0, -1) : path;
+        if (!clean || clean === "") {
+          window.location.replace("/index.html");
+          return;
+        }
+        var known = ["/about", "/services", "/contact", "/success"];
+        if (known.indexOf(clean) !== -1) {
+          window.location.replace(clean + ".html" + window.location.search + window.location.hash);
+          return;
+        }
+        window.location.replace("/index.html");
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
