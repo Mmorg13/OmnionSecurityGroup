@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 160" role="img" aria-label="Omnion Security Group">
+  <title>Omnion Security Group</title>
+  <defs>
+    <style>
+      .wm { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- wordmark -->
+  <g>
+    <text class="wm" x="0" y="92" font-size="84" font-weight="500" letter-spacing="0.18em"
+          fill="#1d1d1f" textLength="360" lengthAdjust="spacingAndGlyphs">OMNI</text>
+    <g transform="translate(392 6)">
+      <g fill="none" stroke="#1d1d1f" stroke-width="8" stroke-linecap="round">
+        <circle cx="54" cy="56" r="34" stroke-dasharray="190 24" stroke-dashoffset="10" />
+      </g>
+      <circle cx="84" cy="28" r="7" fill="#1d1d1f"/>
+    </g>
+    <text class="wm" x="498" y="92" font-size="84" font-weight="500" letter-spacing="0.18em" fill="#1d1d1f">N</text>
+  </g>
+
+  <!-- subtitle -->
+  <text class="wm" x="320" y="146" font-size="22" font-weight="600"
+        letter-spacing="0.34em" text-anchor="middle" fill="#6e6e73">SECURITY GROUP</text>
+</svg>

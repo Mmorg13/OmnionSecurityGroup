@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" role="img" aria-label="Omnion Security Group">
+  <title>Omnion Security Group</title>
+  <defs>
+    <style>
+      .logo-text { 
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif; 
+        fill: #1d1d1f; 
+        font-weight: 500;
+      }
+    </style>
+  </defs>
+  <text class="logo-text" x="0" y="28" font-size="24" letter-spacing="0.05em">OMNION</text>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Omnion mark">
+  <title>Omnion</title>
+  <g fill="none" stroke="#1d1d1f" stroke-width="8" stroke-linecap="round">
+    <!-- ring with subtle gap -->
+    <circle cx="60" cy="60" r="38" stroke-dasharray="210 28" stroke-dashoffset="10" />
+  </g>
+  <!-- orbit dot -->
+  <circle cx="92" cy="30" r="8" fill="#1d1d1f"/>
+</svg>
