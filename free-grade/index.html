@@ -1,0 +1,162 @@
+<!-- free-grade/index.html -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Free Security Grade | Omnion Security Group | York PA</title>
+    <meta name="description" content="Get a free security grade for your organization's website — your top risks in plain English, no sales call. For Central PA nonprofits and small businesses." />
+    <link rel="canonical" href="https://omnionsecurity.com/free-grade/" />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#060a14" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Free Security Grade — Omnion Security Group" />
+    <meta property="og:description" content="See where your security stands. Get a free, plain-English security grade for your organization's website — no sales call." />
+    <meta property="og:url" content="https://omnionsecurity.com/free-grade/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles.css?v=6" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a class="brand" href="/" aria-label="Omnion Security Group">
+          <img class="brand__logo" src="/favicon.svg" alt="" aria-hidden="true" />
+          <span class="brand__text">
+            <span class="brand__name">OMNION</span>
+            <span class="brand__sub">Security Group</span>
+          </span>
+        </a>
+        <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+        <nav class="nav" id="primary-nav" aria-label="Primary">
+          <a class="nav__link" href="/">Home</a>
+          <a class="nav__link" href="/services/">Services</a>
+          <a class="nav__link" href="/plans/">Plans</a>
+          <a class="nav__link" href="/about/">About</a>
+          <a class="nav__link" href="/contact/">Contact</a>
+          <a class="btn btn--small nav__cta" href="/free-grade/">Free security grade</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="pagehero reveal">
+        <div class="container">
+          <div class="pagehero__inner">
+            <h1>Get your free security grade</h1>
+            <p>
+              Enter your organization's website and we'll send back a plain-English security grade and
+              your top risks — free, with no sales call. It's the same first look we give every client.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="split">
+            <!-- LEFT: Request form -->
+            <div class="formcard reveal">
+              <h2>Request your grade</h2>
+              <p style="color:var(--muted); margin:8px 0 20px; font-size:15px;">
+                Tell us where to look and where to send it. We'll email your grade — usually within
+                one business day.
+              </p>
+
+              <form method="POST" action="https://formsubmit.co/888b9a902d338d1f421fb6ed24ba885f">
+                <input type="hidden" name="_subject" value="New Free Security Grade Request - Omnion" />
+                <input type="hidden" name="_next" value="https://omnionsecurity.com/success/" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="email" name="_honey" style="display: none;" tabindex="-1" autocomplete="off" />
+
+                <div class="field">
+                  <label for="website">Your website *</label>
+                  <input type="text" id="website" name="website" placeholder="yourorganization.org" required />
+                </div>
+
+                <div class="field">
+                  <label for="name">Your name *</label>
+                  <input type="text" id="name" name="name" required />
+                </div>
+
+                <div class="field">
+                  <label for="email">Email (where we send your grade) *</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+
+                <div class="field">
+                  <label for="organization">Organization</label>
+                  <input type="text" id="organization" name="organization" />
+                </div>
+
+                <button type="submit" class="btn btn--large">Send me my free grade →</button>
+                <p class="tiny" style="margin-top:10px;">
+                  No credit card. No obligation. We'll never share your information.
+                </p>
+              </form>
+            </div>
+
+            <!-- RIGHT: What you'll get -->
+            <div class="card reveal d1">
+              <h2>What you'll get</h2>
+              <ul class="checks">
+                <li>An overall security grade (A–F) for your organization</li>
+                <li>Your top risks, explained in plain English — no jargon</li>
+                <li>A quick sense of your email, website, and exposure health</li>
+                <li>Clear next steps you can act on, whether or not you hire us</li>
+              </ul>
+
+              <h3 style="margin:24px 0 8px;">Why we offer it free</h3>
+              <p>
+                Most nonprofits and small businesses have never had an easy way to see where they
+                stand. The grade is our way of giving you that clarity up front — the same look we
+                give every client on day one.
+              </p>
+
+              <h3 style="margin:24px 0 8px;">Prefer to talk first?</h3>
+              <p style="margin-bottom:16px;">Book a quick, no-pressure call and we'll walk you through it.</p>
+              <a class="btn btn--ghost btn--small" href="/contact/">Book a 15-minute call</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div>
+            <div class="footer__brand-row"><img src="/favicon.svg" alt="" aria-hidden="true" /><b>OMNION SECURITY GROUP</b></div>
+            <p>Cybersecurity for the organizations that protect communities.</p>
+            <p>York, Pennsylvania · Serving York, Hanover &amp; Central PA</p>
+            <p><a href="mailto:contact@omnionsecurity.com" style="display:inline; color:var(--brand-lite)">contact@omnionsecurity.com</a></p>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <a href="/services/">Services</a>
+            <a href="/plans/">Plans</a>
+            <a href="/about/">About</a>
+            <a href="/contact/">Contact</a>
+          </div>
+          <div>
+            <h4>Get started</h4>
+            <a href="/free-grade/">Free security grade</a>
+            <a href="/contact/">Book a call</a>
+            <a href="/#how">How it works</a>
+          </div>
+        </div>
+        <div class="footer__bottom">© <span id="year"></span> Omnion Security Group · Protecting organizations that protect communities</div>
+      </div>
+    </footer>
+
+    <script src="/js/main.js?v=6"></script>
+  </body>
+</html>

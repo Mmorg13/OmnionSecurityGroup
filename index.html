@@ -4,220 +4,285 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Omnion Security Group | Cybersecurity Consultants Central PA | York, Harrisburg, Lancaster</title>
-    <meta
-      name="description"
-      content="Cybersecurity consulting for Central PA organizations. Serving York, Harrisburg, Lancaster with CISSP-certified advisors for nonprofits, growing businesses & leadership teams. Security assessments, strategy & compliance."
-    />
-    <!-- Favicon / Tab icon -->
+    <title>Omnion Security Group | Cybersecurity for Nonprofits & Small Businesses | York PA</title>
+    <meta name="description" content="Plain-English cybersecurity for Central PA nonprofits and small businesses. Get a free security grade in 60 seconds, then ongoing protection that keeps you grant- and insurance-ready. Serving York, Harrisburg & Lancaster." />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/png" href="/assets/omnion_mark.png" />
-    <link rel="apple-touch-icon" href="/assets/omnion_mark.png" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
     <link rel="manifest" href="/manifest.json" />
-    <meta name="theme-color" content="#0B1220" />
-    <link rel="stylesheet" href="/css/styles.css" />
+    <meta name="theme-color" content="#060a14" />
+    <link rel="canonical" href="https://omnionsecurity.com/" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Omnion Security Group — Cybersecurity for Nonprofits & Small Businesses" />
+    <meta property="og:description" content="See where your security stands in 60 seconds. Plain-English protection for Central PA organizations." />
+    <meta property="og:url" content="https://omnionsecurity.com/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles.css?v=6" />
   </head>
 
   <body>
     <header class="header">
       <div class="container header__inner">
         <a class="brand" href="/" aria-label="Omnion Security Group">
-          <span class="brand__mark" aria-hidden="true"></span>
-          <span class="brand__name">OMNION</span>
-          <span class="brand__sub">Security Group</span>
+          <img class="brand__logo" src="/favicon.svg" alt="" aria-hidden="true" />
+          <span class="brand__text">
+            <span class="brand__name">OMNION</span>
+            <span class="brand__sub">Security Group</span>
+          </span>
         </a>
-
-        <nav class="nav" aria-label="Primary">
+        <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+        <nav class="nav" id="primary-nav" aria-label="Primary">
           <a class="nav__link nav__link--active" href="/">Home</a>
           <a class="nav__link" href="/services/">Services</a>
+          <a class="nav__link" href="/plans/">Plans</a>
           <a class="nav__link" href="/about/">About</a>
-          <a class="btn btn--small" href="/contact/">Contact</a>
+          <a class="nav__link" href="/contact/">Contact</a>
+          <a class="btn btn--small nav__cta" href="/free-grade/">Free security grade</a>
         </nav>
       </div>
     </header>
 
     <main>
+      <!-- HERO -->
       <section class="hero">
+        <span class="orb orb--1"></span>
+        <span class="orb orb--2"></span>
         <div class="container hero__grid">
           <div class="hero__content">
-            <div class="pill">
-              <span class="dot" aria-hidden="true"></span>
-              <span>Cybersecurity • Strategy • Assessments • Responsible AI</span>
-            </div>
-
-            <h1>Get Security Clarity</h1>
-
-            <p class="lead">
-              Omnion helps Central PA organizations build practical cybersecurity without the overwhelm. 
-              We assess your risks, prioritize what matters, and give you a clear roadmap—designed for teams 
-              who need results, not tech jargon.
+            <span class="eyebrow reveal"><span class="dot"></span> Free security grade · Ongoing protection · Central PA</span>
+            <h1 class="reveal d1">See where your security stands in <span class="holo">60 seconds</span>.</h1>
+            <p class="lead reveal d2">
+              Omnion gives Central PA nonprofits and small businesses clear, plain-English cybersecurity —
+              no jargon, no scare tactics, no enterprise price tag. Start with a free grade for your website,
+              then let us keep you protected.
             </p>
-
-            <div class="hero__cta">
-              <a class="btn" href="/contact/">Schedule a consultation</a>
-              <a class="btn btn--ghost" href="/services/">Explore services</a>
+            <div class="hero__cta reveal d3">
+              <a class="btn" href="/free-grade/">Get my free security grade →</a>
+              <a class="btn btn--ghost" href="#how">See how it works</a>
             </div>
-
-            <div class="trust">
-              <div class="trust__item">
-                <div class="trust__kpi">Right-Sized</div>
-                <div class="trust__label">Built for your budget & risk</div>
-              </div>
-              <div class="trust__item">
-                <div class="trust__kpi">Actionable</div>
-                <div class="trust__label">Clear priorities & next steps</div>
-              </div>
-              <div class="trust__item">
-                <div class="trust__kpi">Supportive</div>
-                <div class="trust__label">Remediation help available</div>
-              </div>
+            <div class="hero__trust reveal d4">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Free · ~60 seconds</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> No sales call</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Based in York, PA</span>
             </div>
           </div>
 
-          <div class="hero__visual" aria-hidden="true">
-            <div class="glass">
-              <div class="glass__header">
-                <div class="signal"></div>
-                <div class="signal"></div>
-                <div class="signal"></div>
+          <div class="hero__visual reveal d2">
+            <div class="scanpanel">
+              <div class="scanpanel__head">
+                <span class="scanpanel__dots"><i></i><i></i><i></i></span>
+                <span class="scanpanel__title">omnion · live scan</span>
               </div>
-
-              <div class="glass__body">
-                <div class="metric">
-                  <div class="metric__title">Security Baseline</div>
-                  <div class="metric__value">Defined</div>
-                  <div class="metric__bar"><span style="width: 78%"></span></div>
+              <div class="radar">
+                <div class="radar__sweep"></div>
+                <div class="radar__core"></div>
+              </div>
+              <div class="gradecard">
+                <div class="gradecard__badge">B</div>
+                <div>
+                  <div class="gradecard__title">Your Security Grade</div>
+                  <div class="gradecard__sub">riverside-foundation.org · 3 risks to fix</div>
                 </div>
-
-                <div class="metric">
-                  <div class="metric__title">Risk Prioritization</div>
-                  <div class="metric__value">In Progress</div>
-                  <div class="metric__bar"><span style="width: 62%"></span></div>
-                </div>
-
-                <div class="metric">
-                  <div class="metric__title">Tool Value</div>
-                  <div class="metric__value">Optimized</div>
-                  <div class="metric__bar"><span style="width: 70%"></span></div>
-                </div>
-
-                <div class="mini-cards">
-                  <div class="mini-card">
-                    <div class="mini-card__h">Nonprofits</div>
-                    <div class="mini-card__p">Foundations & roadmaps</div>
-                  </div>
-                  <div class="mini-card">
-                    <div class="mini-card__h">SMBs</div>
-                    <div class="mini-card__p">Tools & governance</div>
-                  </div>
-                  <div class="mini-card">
-                    <div class="mini-card__h">Product Teams</div>
-                    <div class="mini-card__p">Assessments & AI risk</div>
-                  </div>
-                </div>
+              </div>
+              <div class="metric">
+                <div class="metric__row"><span>Email &amp; domain</span><b style="color:var(--amber)">Needs attention</b></div>
+                <div class="metric__bar"><span style="width:58%"></span></div>
+              </div>
+              <div class="metric">
+                <div class="metric__row"><span>Dark-web exposure</span><b style="color:var(--red)">2 leaked logins</b></div>
+                <div class="metric__bar"><span style="width:38%"></span></div>
+              </div>
+              <div class="metric">
+                <div class="metric__row"><span>Website &amp; certificate</span><b style="color:var(--green)">Healthy</b></div>
+                <div class="metric__bar"><span style="width:92%"></span></div>
               </div>
             </div>
-
-            <div class="bg-orb bg-orb--1"></div>
-            <div class="bg-orb bg-orb--2"></div>
           </div>
         </div>
-      </section>
 
-      <section class="trustbar">
+        <!-- marquee: what we check -->
         <div class="container">
-          <div class="trust-stats">
-            <div class="stat">
-              <div class="stat-number">20+</div>
-              <div class="stat-label">Years Experience</div>
-            </div>
-            <div class="stat">
-              <div class="stat-number">CISSP</div>
-              <div class="stat-label">Certified Security Professionals</div>
-            </div>
-            <div class="stat">
-              <div class="stat-number">Fortune 500</div>
-              <div class="stat-label">& Startup Advisors</div>
-            </div>
-            <div class="stat">
-              <div class="stat-number">AI Security</div>
-              <div class="stat-label">Certified Experts</div>
+          <div class="marquee reveal">
+            <div class="marquee__track">
+              <span>Email security</span><span>Dark-web exposure</span><span>SSL / certificates</span><span>Look-alike domains</span><span>Cloud &amp; Microsoft 365</span><span>Open ports</span><span>Compliance posture</span><span>Phishing risk</span>
+              <span>Email security</span><span>Dark-web exposure</span><span>SSL / certificates</span><span>Look-alike domains</span><span>Cloud &amp; Microsoft 365</span><span>Open ports</span><span>Compliance posture</span><span>Phishing risk</span>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section section--soft">
+      <!-- PROBLEM -->
+      <section class="section">
         <div class="container">
-          <div class="section__head">
-            <h2>Who we help</h2>
-            <p>
-              Built for organizations that want clarity and measurable improvement—without the overhead of a full in-house security team.
-            </p>
+          <div class="section__head reveal">
+            <span class="eyebrow"><span class="dot"></span> Why Omnion</span>
+            <h2>You protect your community.<br>Who's protecting you?</h2>
+            <p>Most nonprofits and small businesses aren't careless about security — they're stretched. One person wearing five hats, a tight budget, and a quiet worry: <em>"if something happened, would we even know?"</em> That's the gap we close.</p>
           </div>
+        </div>
+      </section>
 
-          <div class="grid3">
-            <div class="card">
-              <h3>Nonprofits & small teams</h3>
-              <p>Establish a baseline program, reduce risk, and create a roadmap aligned with your mission and budget.</p>
-            </div>
-            <div class="card">
-              <h3>Businesses with security tools</h3>
-              <p>Turn existing security investments into real outcomes through tuning, integration, and operationalization.</p>
-            </div>
-            <div class="card">
-              <h3>Leaders needing direction</h3>
-              <p>Strategy, prioritization, and executive-ready guidance to support growth, compliance, and maturity.</p>
-            </div>
+      <!-- HOW IT WORKS -->
+      <section class="section section--tint" id="how">
+        <div class="container">
+          <div class="section__head reveal">
+            <span class="eyebrow"><span class="dot"></span> How it works</span>
+            <h2>Clarity first. Then a plan. Then peace of mind.</h2>
+            <p>Security shouldn't require an IT department or a big budget. Here's how we make it simple.</p>
           </div>
+          <div class="steps">
+            <div class="step reveal"><div class="step__num">1</div><h3>Get your grade — free</h3><p>Enter your website and get a security grade plus your top risks in about 60 seconds. The same first look we give every client.</p></div>
+            <div class="step reveal d1"><div class="step__num">2</div><h3>Get a full assessment</h3><p>We check your security the way an attacker would, then hand you a plain-English report: what's urgent, what can wait, and exactly how to fix it.</p></div>
+            <div class="step reveal d2"><div class="step__num">3</div><h3>Stay protected</h3><p>We watch your security in the background and keep you grant- and insurance-ready — on a budget built for your organization.</p></div>
+          </div>
+        </div>
+      </section>
 
-          <div class="split">
-            <div class="split__left">
-              <h3 class="h3">What you can expect</h3>
-              <ul class="checklist">
-                <li>A clear view of current risk and gaps</li>
-                <li>Prioritized findings that are easy to act on</li>
-                <li>Practical recommendations, not fear-driven messaging</li>
-                <li>Optional remediation support to help you close gaps</li>
-              </ul>
+      <!-- WHAT YOU GET -->
+      <section class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <span class="eyebrow"><span class="dot"></span> Ongoing protection</span>
+            <h2>A whole security team, working in the background</h2>
+            <p>Your Omnion plan comes with a private portal and continuous protection — the same tools the big organizations use, sized and priced for yours.</p>
+          </div>
+          <div class="grid grid--3">
+            <div class="card reveal">
+              <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <h3>Continuous monitoring</h3>
+              <p>We watch for new exposures, expiring certificates, and configuration drift — and tell you in plain English when something needs attention.</p>
             </div>
-            <div class="split__right">
-              <div class="panel">
-                <div class="panel__tag">Common starting points</div>
-                <div class="panel__title">Security Foundations • Strategic Advisory • Tool Optimization</div>
-                <p class="panel__text">
-                  Start with a consultation. We’ll recommend the best next step based on your goals, risk, and constraints.
-                </p>
-                <a class="btn btn--small" href="/contact/">Talk to Omnion</a>
-              </div>
+            <div class="card reveal d1">
+              <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+              <h3>Dark-web monitoring</h3>
+              <p>We watch known breach databases for your leaked passwords and emails, so you can shut down a stolen login before it's used.</p>
+            </div>
+            <div class="card reveal d2">
+              <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div>
+              <h3>Network risk map</h3>
+              <p>Compass turns your exposure into a clear picture — what's connected, what's at risk, and the shortest path an attacker would take.</p>
+            </div>
+            <div class="card reveal">
+              <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12A10 10 0 1 1 12 2"/><path d="M12 6v6l4 2"/></svg></div>
+              <h3>Phishing simulation <span class="card__tag">Enterprise</span></h3>
+              <p>See how your team responds to realistic phishing — then train the people who need it, before a real attacker tries.</p>
+            </div>
+            <div class="card reveal d1">
+              <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+              <h3>Compliance &amp; board reporting <span class="card__tag">Enterprise</span></h3>
+              <p>Plain-English posture summaries mapped to SOC 2, HIPAA, NIST CSF and CIS — ready for your board, funders, and insurers.</p>
+            </div>
+            <div class="card reveal d2">
+              <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+              <h3>Your private portal</h3>
+              <p>Every finding, your security score over time, and what we're fixing — in one simple dashboard, no jargon required.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="cta">
-        <div class="container cta__inner">
-          <div class="cta__copy">
-            <h2>Get clarity in your first conversation.</h2>
-            <p>
-              We’ll align on your environment, priorities, and what “good” looks like—then map the best path forward.
-            </p>
+      <!-- STATS -->
+      <section class="section section--tint">
+        <div class="container">
+          <div class="stats">
+            <div class="stat reveal"><div class="stat__num"><span class="holo" data-count="59" data-suffix="%">0%</span></div><div class="stat__label">of small businesses were hit by a cyberattack last year<sup style="font-size:10px; color:var(--muted-2);"> ¹</sup></div></div>
+            <div class="stat reveal d1"><div class="stat__num"><span class="holo" data-count="88" data-suffix="%">0%</span></div><div class="stat__label">of organizations now use AI — most with no plan to secure it<sup style="font-size:10px; color:var(--muted-2);"> ²</sup></div></div>
+            <div class="stat reveal d2"><div class="stat__num"><span class="holo" data-count="63" data-suffix="%">0%</span></div><div class="stat__label">of breached organizations had no AI governance policy<sup style="font-size:10px; color:var(--muted-2);"> ³</sup></div></div>
+            <div class="stat reveal d3"><div class="stat__num"><span class="holo" data-count="60" data-suffix="s">0s</span></div><div class="stat__label">to see your own security grade</div></div>
+          </div>
+          <p class="tiny reveal" style="text-align:center; margin-top:18px;">¹ Hiscox Cyber Readiness Report, 2025 &nbsp;·&nbsp; ² McKinsey State of AI, 2025 &nbsp;·&nbsp; ³ IBM Cost of a Data Breach, 2025</p>
+        </div>
+      </section>
+
+      <!-- AI TEASER -->
+      <section class="section">
+        <div class="container">
+          <div class="feature-split reveal">
+            <div>
+              <span class="eyebrow"><span class="dot"></span> New · Responsible AI</span>
+              <h2>Rolling out AI? We'll help you do it safely.</h2>
+              <p style="margin-bottom:18px;">Your team is already using AI — often faster than anyone can govern it. We find where it's in use, protect the data going into it, and put simple guardrails in place, so you get the upside without the breach, the compliance headache, or the donor-trust hit.</p>
+              <a class="btn" href="/services/#ai">Explore AI security →</a>
+            </div>
+            <div class="console reveal d1">
+              <div class="console__head"><span class="dot"></span> AI readiness · sample</div>
+              <div class="console__row">Shadow AI in use <b class="tag-risk">Ungoverned</b></div>
+              <div class="console__row">AI acceptable-use policy <b class="tag-risk">Missing</b></div>
+              <div class="console__row">Data leakage controls <b class="tag-warn">Gaps</b></div>
+              <div class="console__row">Human-in-the-loop safeguards <b class="tag-ok">On track</b></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY NOW -->
+      <section class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <span class="eyebrow"><span class="dot"></span> Why now</span>
+            <h2>Three reasons Central PA organizations are acting</h2>
+            <p>The stakes changed — and the same steps that protect you also keep you compliant.</p>
+          </div>
+          <div class="grid grid--3">
+            <div class="card reveal"><h3>A new PA law raised the stakes</h3><p>Pennsylvania's updated Breach Notification Act (Act 33 of 2024) requires notifying the Attorney General for larger breaches and providing 12 months of free credit monitoring. A breach in PA just got more expensive.</p></div>
+            <div class="card reveal d1"><h3>Cyber-insurance got strict</h3><p>Renewals now demand proof of MFA, backups, and an incident-response plan — nearly half of 2025 claims traced back to logins without MFA. We help you pass the questionnaire honestly, and often lower the premium.</p></div>
+            <div class="card reveal d2"><h3>Funders want a security assessment</h3><p>Security has quietly become a grant requirement. We produce the documented, plain-English assessment funders accept.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PLANS TEASER -->
+      <section class="section section--tint">
+        <div class="container">
+          <div class="cta reveal" style="background:linear-gradient(140deg, rgba(34,139,230,0.12), rgba(124,58,237,0.1)); border-color:rgba(34,139,230,0.28);">
+            <span class="eyebrow" style="margin-bottom:14px;"><span class="dot"></span> Plans</span>
+            <h2>Protection that fits your budget</h2>
+            <p>Start free, then choose your level — from a free grade to fully managed. Simple, nonprofit-friendly pricing, no surprises.</p>
+            <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin:24px 0 4px;">
+              <span class="badge-pill">Free · $0</span>
+              <span class="badge-pill">Essentials · $149/mo</span>
+              <span class="badge-pill">Professional · $499/mo</span>
+              <span class="badge-pill">Premium · $899/mo</span>
+              <span class="badge-pill">Enterprise · $1,499/mo</span>
+            </div>
             <div class="cta__actions">
-              <a class="btn btn--dark" href="/contact/">Schedule a consultation</a>
-              <a class="btn btn--ghost" href="/services/">View services</a>
+              <a class="btn" href="/plans/">See full plans &amp; pricing →</a>
+              <a class="btn btn--ghost" href="/free-grade/">Get my free grade</a>
             </div>
           </div>
-          <div class="cta__panel">
-            <div class="panel panel--alt">
-              <h3>Engagement options</h3>
-              <ul class="bullets">
-                <li>Fixed-scope assessments</li>
-                <li>Security strategy and roadmap support</li>
-                <li>Ongoing advisory retainers</li>
-                <li>Tool optimization and operational support</li>
-                <li>Responsible AI guidance</li>
-                <li>Security education and training programs</li>
-              </ul>
+        </div>
+      </section>
+
+      <!-- WHO WE SERVE -->
+      <section class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <span class="eyebrow"><span class="dot"></span> Who we serve</span>
+            <h2>Built for the organizations that hold our community together</h2>
+            <p>We speak your language and price for your reality — no hardware to push, no lock-in, just independent security you can trust.</p>
+          </div>
+          <div class="grid grid--3">
+            <div class="card reveal"><h3>Nonprofits &amp; foundations</h3><p>Protect donor data, stay grant-ready, and give your board confidence — on a mission-sized budget.</p></div>
+            <div class="card reveal d1"><h3>Small businesses</h3><p>Get the protection that keeps you insurable and open for business, without hiring a security team.</p></div>
+            <div class="card reveal d2"><h3>Clinics, schools &amp; faith communities</h3><p>Handle sensitive data with care and meet the standards your partners and regulators expect.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section">
+        <div class="container">
+          <div class="cta reveal">
+            <span class="orb orb--1" style="opacity:.35"></span>
+            <h2>Find out where you stand — <span class="holo">free</span>.</h2>
+            <p>It takes about a minute and there's no obligation. See your security grade and your top risks today.</p>
+            <div class="cta__actions">
+              <a class="btn" href="/free-grade/">Get my free security grade →</a>
+              <a class="btn btn--ghost" href="/contact/">Book a 15-minute call</a>
             </div>
           </div>
         </div>
@@ -225,29 +290,32 @@
     </main>
 
     <footer class="footer">
-      <div class="container footer__inner">
-        <div>
-          <div class="footer__brand">OMNION Security Group</div>
-          <div class="footer__muted">Cybersecurity advisory, assessments, and operational support.</div>
+      <div class="container">
+        <div class="footer__inner">
+          <div>
+            <div class="footer__brand-row"><img src="/favicon.svg" alt="" aria-hidden="true" /><b>OMNION SECURITY GROUP</b></div>
+            <p>Cybersecurity for the organizations that protect communities.</p>
+            <p>York, Pennsylvania · Serving York, Hanover &amp; Central PA</p>
+            <p><a href="mailto:contact@omnionsecurity.com" style="display:inline; color:var(--brand-lite)">contact@omnionsecurity.com</a></p>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <a href="/services/">Services</a>
+            <a href="/plans/">Plans</a>
+            <a href="/about/">About</a>
+            <a href="/contact/">Contact</a>
+          </div>
+          <div>
+            <h4>Get started</h4>
+            <a href="/free-grade/">Free security grade</a>
+            <a href="/contact/">Book a call</a>
+            <a href="/#how">How it works</a>
+          </div>
         </div>
-
-        <div class="footer__links" aria-label="Footer links">
-          <a href="/services/">Services</a>
-          <a href="/about/">About</a>
-          <a href="/contact/">Contact</a>
-        </div>
-
-        <div class="footer__muted">
-          © <span id="year"></span> Omnion Security Group. All rights reserved.
-        </div>
+        <div class="footer__bottom">© <span id="year"></span> Omnion Security Group · Protecting organizations that protect communities</div>
       </div>
     </footer>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-    
-    <!-- Advanced Interactive JavaScript -->
-    <script src="/js/main.js"></script>
+    <script src="/js/main.js?v=6"></script>
   </body>
 </html>

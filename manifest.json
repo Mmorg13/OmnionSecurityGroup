@@ -1,11 +1,11 @@
 {
   "name": "Omnion Security Group",
   "short_name": "Omnion",
-  "description": "Cybersecurity consulting for Central PA organizations",
+  "description": "Plain-English cybersecurity for Central PA nonprofits and small businesses",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0B1220",
-  "theme_color": "#1C5DFF",
+  "background_color": "#060a14",
+  "theme_color": "#060a14",
   "icons": [
     {
       "src": "favicon.svg",
