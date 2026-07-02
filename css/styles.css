@@ -187,12 +187,16 @@ h1,h2,h3,h4{ margin:0; letter-spacing:-0.02em; line-height:1.08; font-weight:800
 .radar{ position:relative; width:132px; height:132px; margin:6px auto 18px; border-radius:999px;
   background:radial-gradient(circle at center, rgba(34,139,230,0.10), transparent 70%);
   border:1px solid rgba(34,139,230,0.25); }
-.radar::before,.radar::after{ content:""; position:absolute; border-radius:999px; border:1px solid rgba(34,139,230,0.14); }
-.radar::before{ inset:22px; } .radar::after{ inset:44px; }
+/* (inner concentric rings removed — one clean ring + sweep + logo core) */
 .radar__sweep{ position:absolute; inset:0; border-radius:999px; overflow:hidden; }
-.radar__sweep::before{ content:""; position:absolute; top:50%; left:50%; width:50%; height:50%;
-  transform-origin:top left;
-  background:conic-gradient(from 0deg, rgba(34,139,230,0.5), transparent 60%);
+/* Full-circle conic beam: a bright leading edge that fades into a trailing
+   tail, rotated about the center — a true radar sweep, no square corners. */
+.radar__sweep::before{ content:""; position:absolute; inset:0; border-radius:999px;
+  background:conic-gradient(from 0deg,
+    rgba(158,208,255,0.55) 0deg,
+    rgba(34,139,230,0.35) 18deg,
+    rgba(34,139,230,0.12) 45deg,
+    transparent 70deg, transparent 360deg);
   animation:sweep 3.2s linear infinite; }
 @keyframes sweep{ to{ transform:rotate(360deg); } }
 .radar__core{ position:absolute; top:50%; left:50%; width:14px; height:14px; transform:translate(-50%,-50%);
@@ -359,8 +363,14 @@ select.field, .field select{ appearance:none; background-image:linear-gradient(4
 .orbit__ring--o{ inset:0; }
 .orbit__ring--i{ inset:64px; border-color:rgba(255,255,255,0.07); }
 .orbit__sweep{ position:absolute; inset:0; border-radius:999px; overflow:hidden; }
-.orbit__sweep::before{ content:""; position:absolute; top:50%; left:50%; width:50%; height:50%; transform-origin:top left;
-  background:conic-gradient(from 0deg, rgba(34,139,230,0.28), transparent 55%); animation:sweep 5s linear infinite; }
+/* Same full-circle conic beam as .radar__sweep, softer for the orbit backdrop. */
+.orbit__sweep::before{ content:""; position:absolute; inset:0; border-radius:999px;
+  background:conic-gradient(from 0deg,
+    rgba(158,208,255,0.3) 0deg,
+    rgba(34,139,230,0.18) 20deg,
+    rgba(34,139,230,0.07) 50deg,
+    transparent 75deg, transparent 360deg);
+  animation:sweep 5s linear infinite; }
 .orbit__center{ position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:96px; height:96px; border-radius:999px;
   display:grid; place-items:center; text-align:center; gap:2px;
   background:linear-gradient(160deg, rgba(34,139,230,0.2), rgba(124,58,237,0.14)); border:1px solid rgba(34,139,230,0.4);
